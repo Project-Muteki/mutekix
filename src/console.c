@@ -149,6 +149,7 @@ int mutekix_console_puts(const char *s) {
     if (!fbcon_config.ready) {
         return EOF;
     }
+
     size_t len = strlen(s);
     size_t actual = mutekix_console_write(s, len);
     mutekix_console_write("\n", 1);
@@ -160,11 +161,19 @@ int mutekix_console_printf(const char *fmt, ...) {
     va_list va;
 
     va_start(va, fmt);
-    int result = vsnprintf(tmp, sizeof(tmp), fmt, va);
-    int puts_result = mutekix_console_puts(tmp);
-    va_end(va);
 
-    return (puts_result == EOF) ? EOF : result;
+    if (!fbcon_config.ready) {
+        return -1;
+    }
+
+    int ret = vsnprintf(tmp, sizeof(tmp), fmt, va);
+    if (ret < 0) {
+        return ret;
+    }
+    mutekix_console_write(tmp, (size_t) ret);
+
+    va_end(va);
+    return ret;
 }
 
 void mutekix_console_clear() {
