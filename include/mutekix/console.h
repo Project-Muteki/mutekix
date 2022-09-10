@@ -36,5 +36,6 @@ extern void mutekix_console_clear();
 extern size_t mutekix_console_write(const char *ptr, size_t len);
 extern int mutekix_console_puts(const char *s);
 extern int mutekix_console_printf(const char *fmt, ...);
+extern int mutekix_console_getchar();
 
 #endif // __MUTEKIX_CONSOLE_H__

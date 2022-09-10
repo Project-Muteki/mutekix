@@ -7,8 +7,13 @@
 #include <muteki/threading.h>
 #include <muteki/utils.h>
 #include <muteki/ui/canvas.h>
+#include <muteki/ui/event.h>
 
 #include <mutekix/console.h>
+
+static unsigned int FLAG_SHIFT = 1;
+static unsigned int FLAG_CAPS = (1 << 1);
+static unsigned int FLAG_SYMBOL = (1 << 2);
 
 typedef struct {
     unsigned short bottom_right_x;
@@ -174,6 +179,166 @@ int mutekix_console_printf(const char *fmt, ...) {
 
     va_end(va);
     return ret;
+}
+
+int mutekix_console_getchar() {
+    static ui_event_t uievent = {0};
+    static unsigned int flags;
+    register bool is_shift = false, is_symbol=false;
+
+    while (true) {
+        if ((TestPendEvent(&uievent) || TestKeyEvent(&uievent)) && GetEvent(&uievent)) {
+            if (uievent.key_code0 != KEY_SHIFT && uievent.key_code0 != KEY_SYMBOL) {
+                // These 2 are stackable so symbol shift <key> will work
+                // Note that shift symbol will not work because that will be search on some systems
+                if (flags & FLAG_SHIFT) {
+                    is_shift = true;
+                    flags &= ~(FLAG_SHIFT);
+                }
+                if (flags & FLAG_SYMBOL) {
+                    is_symbol = true;
+                    flags &= ~(FLAG_SYMBOL);
+                }
+            }
+
+            switch (uievent.key_code0) {
+            // Exceptions
+            case KEY_ESC:
+                return 4; // ^D
+            case KEY_ENTER:
+                return '\r';
+            case KEY_SHIFT:
+                flags ^= FLAG_SHIFT;
+                break;
+            case KEY_SYMBOL:
+                flags ^= FLAG_SYMBOL;
+                break;
+            case KEY_CAPS:
+                flags ^= FLAG_CAPS;
+                break;
+            case KEY_TAB:
+                return '\t';
+            case KEY_DEL:
+                return 8; // ^H aka backspace
+            // Symbol keys
+            case KEY_1:
+                // Symbol + 1 = `
+                return is_symbol ? '`' : '1';
+            case KEY_EXCL:
+                // Symbol + ! (Symbol + Shift + 1) = ~
+                return is_symbol ? '~' : '!';
+            case KEY_6:
+                // Symbol + 6 = ^
+                return is_symbol ? '^' : '6';
+            case KEY_QUESTION:
+                // Symbol + ? (Symbol + Shift + 7) = /
+                return is_symbol ? '/' : '?';
+            case KEY_7:
+                // Symbol + 7 = &
+                return is_symbol ? '&' : '7';
+            case KEY_COMMA:
+                // Symbol + , (Symbol + Shift + 7) = <
+                return is_symbol ? '<' : ',';
+            case KEY_0:
+                // Symbol + 0 = =
+                return is_symbol ? '=' : '0';
+            case KEY_RPAREN:
+                // Symbol + ) = +
+                return is_symbol ? '+' : ')';
+            case KEY_MENU:
+                // Symbol + Menu = _
+                if (is_symbol) {
+                    return '_';
+                }
+                break;
+            case KEY_DASH:
+                // Symbol + - (Symbol + Shift + Menu) = _
+                return is_symbol ? '_' : '-';
+            case KEY_FONT:
+                // Symbol + Font = >
+                if (is_symbol) {
+                    return '>';
+                }
+                break;
+            case KEY_DOT:
+                // Symbol + . (Symbol + Shift + Font) = >
+                return is_symbol ? '>' : '.';
+            case KEY_I:
+                // Symbol + Shift + I = {
+                if (is_symbol && is_shift) {
+                    return '{';
+                }
+                // Symbol + I = [
+                if (is_symbol) {
+                    return '[';
+                }
+                if (is_shift) {
+                    return 'I';
+                }
+                return 'i';
+            case KEY_O:
+                // Symbol + Shift + O = }
+                if (is_symbol && is_shift) {
+                    return '}';
+                }
+                // Symbol + O = ]
+                if (is_symbol) {
+                    return ']';
+                }
+                if (is_shift) {
+                    return 'O';
+                }
+                return 'o';
+            case KEY_P:
+                // Symbol + Shift + P = |
+                if (is_symbol && is_shift) {
+                    return '|';
+                }
+                // Symbol + P = \\ (a single backslash)
+                if (is_symbol) {
+                    return '\\';
+                }
+                if (is_shift) {
+                    return 'P';
+                }
+                return 'p';
+            case KEY_K:
+                // Symbol + Shift + K = :
+                if (is_symbol && is_shift) {
+                    return ':';
+                }
+                // Symbol + K = ;
+                if (is_symbol) {
+                    return ';';
+                }
+                if (is_shift) {
+                    return 'K';
+                }
+                return 'k';
+            case KEY_L:
+                // Symbol + Shift + L = "
+                if (is_symbol && is_shift) {
+                    return '"';
+                }
+                // Symbol + L = '
+                if (is_symbol) {
+                    return '\'';
+                }
+                if (is_shift) {
+                    return 'L';
+                }
+                return 'l';
+            default:
+                if (uievent.key_code0 >= KEY_A && uievent.key_code0 <= KEY_Z) {
+                    return uievent.key_code0 + ((((flags & FLAG_CAPS) != 0) || is_shift) ? 0 : 0x20);
+                }
+                if (uievent.key_code0 >= 0x20 && uievent.key_code0 < 0x80) {
+                    return uievent.key_code0;
+                }
+            }
+        }
+    }
+    //return EOF;
 }
 
 void mutekix_console_clear() {
