@@ -1,6 +1,11 @@
 #ifndef __MUTEKIX_THREAD_WRAPPER_H__
 #define __MUTEKIX_THREAD_WRAPPER_H__
+
 #include <muteki/threading.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /**
  * @brief Input for mutekix_thread_wrapper().
@@ -20,4 +25,9 @@ typedef struct {
  * @param arg The real function and its user data pointer.
  */
 void mutekix_thread_wrapper(void *arg);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
+
 #endif // __MUTEKIX_THREAD_WRAPPER_H__

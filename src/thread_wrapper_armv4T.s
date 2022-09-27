@@ -9,10 +9,12 @@ mutekix_thread_wrapper:
     @ Check for alignment
     tst sp, #7
 
-    @ Only push 1 element if not aligned, otherwise push 2 and set the flag.
+    @ If not aligned, the dummy value flag itself will ensure the alignment, otherwise push a dummy value to maintain the alignment.
     mov r1, #0
     subeq sp, sp, #4
+    @ Flag is set when dummy value is pushed.
     moveq r1, #1
+    @ Push the flag value
     stmfd sp!, {r1}
 
     @ Run the actual thread
@@ -22,9 +24,10 @@ mutekix_thread_wrapper:
     mov lr, pc
     bx r1
 
-    @ After finished, check for the fixed flag and undo the fix if set
+    @ After finished, pop the dummy value flag and check it
     ldmfd sp!, {r1}
     cmp r1, #0
+    @ If set, pop the dummy value.
     addne sp, sp, #4
 
     @ Return

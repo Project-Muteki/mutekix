@@ -1,6 +1,10 @@
 #ifndef __MUTEKIX_CONSOLE_H__
 #define __MUTEKIX_CONSOLE_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     union {
         // by name
@@ -37,5 +41,9 @@ extern size_t mutekix_console_write(const char *ptr, size_t len);
 extern int mutekix_console_puts(const char *s);
 extern int mutekix_console_printf(const char *fmt, ...);
 extern int mutekix_console_getchar();
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif // __MUTEKIX_CONSOLE_H__
