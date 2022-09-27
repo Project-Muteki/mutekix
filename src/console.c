@@ -11,9 +11,9 @@
 
 #include <mutekix/console.h>
 
-static unsigned int FLAG_SHIFT = 1;
-static unsigned int FLAG_CAPS = (1 << 1);
-static unsigned int FLAG_SYMBOL = (1 << 2);
+static const unsigned int FLAG_SHIFT = 1;
+static const unsigned int FLAG_CAPS = (1 << 1);
+static const unsigned int FLAG_SYMBOL = (1 << 2);
 
 typedef struct {
     unsigned short bottom_right_x;
