@@ -1,6 +1,7 @@
     .arm
     .cpu arm7tdmi
     .global mutekix_thread_wrapper
+    .type mutekix_thread_wrapper, %function
 @ This is a modified version of the stack fixer in CRT0. It uses stack tip to save the state instead of relying on global variables.
 mutekix_thread_wrapper:
     @ Align to 8-bytes ourselves

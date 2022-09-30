@@ -4,6 +4,7 @@ project('mutekix', 'c',
 
 sources = [
     'src/console.c',
+    'src/threading.c',
     'src/thread_wrapper_armv4T.s',
 ]
 
