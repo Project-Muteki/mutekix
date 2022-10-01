@@ -47,6 +47,14 @@ void **mutekix_tls_get(thread_t *thr, unsigned int key) {
     return NULL;
 }
 
+void *mutekix_tls_getvalue(thread_t *thr, unsigned int key) {
+    void **tls_ptrs = (void **) &(thr->unk_0x34);
+    if (key <= MUTEKIX_TLS_KEY_MAX) {
+        return *(tls_ptrs + key);
+    }
+    return NULL;
+}
+
 int mutekix_tls_set(thread_t *thr, unsigned int key, void *value) {
     void **tls_ptrs = (void **) &(thr->unk_0x34);
     if (key <= MUTEKIX_TLS_KEY_MAX) {
@@ -54,6 +62,33 @@ int mutekix_tls_set(thread_t *thr, unsigned int key, void *value) {
         return 0;
     }
     return -1;
+}
+
+void *mutekix_tls_alloc(thread_t *thr, unsigned int key, size_t bytes) {
+    void **tls_area_p = mutekix_tls_get(thr, key);
+    if (tls_area_p == NULL) {
+        return NULL;
+    }
+    void *tls_area = *tls_area_p;
+    if (tls_area != NULL) {
+        return NULL;
+    }
+    void *allocated = malloc(bytes);
+    if (allocated == NULL) {
+        return NULL;
+    }
+    *tls_area_p = allocated;
+    return allocated;
+}
+
+int mutekix_tls_free(thread_t *thr, unsigned int key) {
+    void *tls_area = mutekix_tls_getvalue(thr, key);
+    if (tls_area == NULL) {
+        return -1;
+    }
+    free(tls_area);
+    mutekix_tls_set(thr, key, NULL);
+    return 0;
 }
 
 int mutekix_tls_init_self() {
@@ -72,6 +107,14 @@ void **mutekix_tls_get_self(unsigned int key) {
     return mutekix_tls_get(thr, key);
 }
 
+void *mutekix_tls_getvalue_self(unsigned int key) {
+    thread_t *thr = mutekix_thread_get_current();
+    if (thr == NULL) {
+        return NULL;
+    }
+    return mutekix_tls_getvalue(thr, key);
+}
+
 int mutekix_tls_set_self(unsigned int key, void *value) {
     thread_t *thr = mutekix_thread_get_current();
     if (thr == NULL) {
@@ -80,6 +123,23 @@ int mutekix_tls_set_self(unsigned int key, void *value) {
     return mutekix_tls_set(thr, key, value);
 }
 
+void *mutekix_tls_alloc_self(unsigned int key, size_t bytes) {
+    thread_t *thr = mutekix_thread_get_current();
+    if (thr == NULL) {
+        return NULL;
+    }
+    return mutekix_tls_alloc(thr, key, bytes);
+}
+
+int mutekix_tls_free_self(unsigned int key) {
+    thread_t *thr = mutekix_thread_get_current();
+    if (thr == NULL) {
+        return -1;
+    }
+    return mutekix_tls_free(thr, key);
+}
+
+// __aeabi_read_tp implementation using mutekix_tls
 // NOTE: __tdata_end, __tbss_start and __tbss_end are not available in the default EABI ld script and needs to be defined.
 extern char __tdata_start;
 extern char __tdata_end;
@@ -87,19 +147,20 @@ extern char __tbss_start;
 extern char __tbss_end;
 
 void *__aeabi_read_tp_real() {
-    void **tls_area_p = mutekix_tls_get_self(MUTEKIX_TLS_KEY_TLS);
-    if (tls_area_p == NULL) {
+    thread_t *thr = mutekix_thread_get_current();
+    if (thr == NULL) {
         return NULL;
     }
 
-    // TODO do we move the init routine to outside?
-    char *tls_area = (char *) *tls_area_p;
+    char *tls_area = mutekix_tls_getvalue(thr, MUTEKIX_TLS_KEY_TLS);
+
+    // initialize the TLS area if it's not already initialized
     if (tls_area == NULL) {
         size_t tdata_size = &__tdata_end - &__tdata_start;
         size_t tbss_size = &__tbss_end - &__tbss_start;
         // TODO what's with this 8-byte padding? Is it related to dynamic linking?
         // Seems like musl just calls it "gap"
-        tls_area = malloc(8 + tdata_size + tbss_size);
+        tls_area = mutekix_tls_alloc(thr, MUTEKIX_TLS_KEY_TLS, 8 + tdata_size + tbss_size);
 
         if (tls_area != NULL) {
             memset(tls_area, 0, 8);
@@ -110,7 +171,6 @@ void *__aeabi_read_tp_real() {
                 memset(tls_area + 8 + tdata_size, 0, tbss_size);
             }
         }
-        *tls_area_p = tls_area;
     }
 
     return tls_area;

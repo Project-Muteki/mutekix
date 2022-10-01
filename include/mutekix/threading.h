@@ -73,12 +73,31 @@ extern void **mutekix_tls_get(thread_t *thr, unsigned int key);
  * @brief Get a value in the TLS block of current thread using a key.
  *
  * @param key TLS key.
- * @return Pointer to the TLS value, or NULL if failed.
+ * @return Pointer to the TLS value, or NULL if the key is invalid.
  */
 extern void **mutekix_tls_get_self(unsigned int key);
 
 /**
+ * @brief Get the actual value in the TLS block of a specific thread using a key.
+ *
+ * @param thr Thread descriptor.
+ * @param key TLS key.
+ * @return The value. Note that NULL is returned if the key is invalid.
+ */
+extern void *mutekix_tls_getvalue(thread_t *thr, unsigned int key);
+
+/**
+ * @brief Get the actual value in the TLS block of current thread using a key.
+ *
+ * @param key TLS key.
+ * @return The value. Note that NULL is returned if the key is invalid.
+ */
+extern void *mutekix_tls_getvalue_self(unsigned int key);
+
+/**
  * @brief Set a value in the TLS block of a specific thread using a key.
+ *
+ * Using this to overwrite values set by mutekix_tls_alloc() or mutekix_tls_alloc_self() will cause a memory leak.
  *
  * @param thr Thread descriptor.
  * @param key TLS key.
@@ -95,6 +114,50 @@ extern int mutekix_tls_set(thread_t *thr, unsigned int key, void *value);
  * @return Pointer to the TLS value, or NULL if failed.
  */
 extern int mutekix_tls_set_self(unsigned int key, void *value);
+
+/**
+ * @brief Allocate heap memory and store the pointer in the TLS block of a specific thread using a key.
+ *
+ * This will only allocate when the value corresponds to the TLS key is NULL.
+ *
+ * @param thr Thread descriptor.
+ * @param key TLS key.
+ * @param bytes Number of bytes to allocate.
+ * @return Pointer to the allocated memory, or NULL if allocation is impossible.
+ */
+extern void *mutekix_tls_alloc(thread_t *thr, unsigned int key, size_t bytes);
+
+/**
+ * @brief Allocate heap memory and store the pointer in the TLS block of the current thread using a key.
+ *
+ * This will only allocate when the value corresponds to the TLS key is NULL.
+ *
+ * @param key TLS key.
+ * @param bytes Number of bytes to allocate.
+ * @return Pointer to the allocated memory, or NULL if allocation is impossible.
+ */
+extern void *mutekix_tls_alloc_self(unsigned int key, size_t bytes);
+
+/**
+ * @brief Free the heap memory previously allocated with mutekix_tls_alloc() or mutekix_tls_alloc_self().
+ *
+ * The behavior of calling this with a key previously set with methods other than mutekix_tls_alloc() or mutekix_tls_alloc_self() is undefined.
+ *
+ * @param thr Thread descriptor.
+ * @param key TLS key.
+ * @param 0 on success, -1 on failure.
+ */
+extern int mutekix_tls_free(thread_t *thr, unsigned int key);
+
+/**
+ * @brief Free the heap memory previously allocated with mutekix_tls_alloc() or mutekix_tls_alloc_self().
+ *
+ * The behavior of calling this with a key previously set with methods other than mutekix_tls_alloc() or mutekix_tls_alloc_self() is undefined.
+ *
+ * @param key TLS key.
+ * @param 0 on success, -1 on failure.
+ */
+extern int mutekix_tls_free_self(unsigned int key);
 
 #ifdef __cplusplus
 } // extern "C"
