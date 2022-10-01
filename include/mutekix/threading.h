@@ -34,17 +34,31 @@ extern void mutekix_thread_wrapper(void *arg);
 extern thread_t *mutekix_thread_get_current();
 
 /** Max TLS key allowed. */
-static const int MUTEKIX_TLS_KEY_MAX = sizeof(((thread_t *) NULL)->unk_0x34) - 1;
+static const unsigned int MUTEKIX_TLS_KEY_MAX = sizeof(((thread_t *) NULL)->unk_0x34) - 1;
+
+#define MUTEKIX_TLS_KEY_TLS 0
+#define MUTEKIX_TLS_KEY_TSS 1
 
 /**
  * @brief Initialize Thread Local Storage (TLS) for a thread.
  *
  * This allocates the TLS block (if applicable) and set all values in that block to NULL.
  *
+ * This must be called after the thread is created with OSCreateThread() if TLS will be used later.
+ *
  * @param thr Thread descriptor the TLS block belongs to.
  * @return 0 if successful.
  */
 extern int mutekix_tls_init(thread_t *thr);
+
+/**
+ * @brief Initialize Thread Local Storage (TLS) for current thread.
+ *
+ * This allocates the TLS block (if applicable) and set all values in that block to NULL.
+ *
+ * @return 0 if successful.
+ */
+extern int mutekix_tls_init_self();
 
 /**
  * @brief Get a value in the TLS block of a specific thread using a key.
@@ -53,7 +67,15 @@ extern int mutekix_tls_init(thread_t *thr);
  * @param key TLS key.
  * @return Pointer to the TLS value, or NULL if failed.
  */
-extern void **mutekix_tls_get(thread_t *thr, int key);
+extern void **mutekix_tls_get(thread_t *thr, unsigned int key);
+
+/**
+ * @brief Get a value in the TLS block of current thread using a key.
+ *
+ * @param key TLS key.
+ * @return Pointer to the TLS value, or NULL if failed.
+ */
+extern void **mutekix_tls_get_self(unsigned int key);
 
 /**
  * @brief Set a value in the TLS block of a specific thread using a key.
@@ -63,7 +85,16 @@ extern void **mutekix_tls_get(thread_t *thr, int key);
  * @param value New value.
  * @return Pointer to the TLS value, or NULL if failed.
  */
-extern int mutekix_tls_set(thread_t *thr, int key, void *value);
+extern int mutekix_tls_set(thread_t *thr, unsigned int key, void *value);
+
+/**
+ * @brief Set a value in the TLS block of current thread using a key.
+ *
+ * @param key TLS key.
+ * @param value New value.
+ * @return Pointer to the TLS value, or NULL if failed.
+ */
+extern int mutekix_tls_set_self(unsigned int key, void *value);
 
 #ifdef __cplusplus
 } // extern "C"
