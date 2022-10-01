@@ -23,7 +23,6 @@ thread_t *mutekix_thread_get_current() {
      * kernel structures when there's nothing else that acquired it. It
      * initializes the critical section descriptor just enough and call
      * OSEnterCriticalSection() to grab the current thread ID. */
-    cs.magic = 0x202;
     cs.thr = NULL;
     cs.refcount = 0;
     OSEnterCriticalSection(&cs);
