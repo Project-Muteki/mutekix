@@ -1,0 +1,13 @@
+option(
+    'provide_tls',
+    type : 'boolean',
+    value : false,
+    description : 'Provide TLS implementation. Useful when Newlib does not provide it.',
+)
+
+option(
+    'use_only_public_interfaces',
+    type : 'boolean',
+    value : false,
+    description: 'Use only public Besta RTOS interfaces (i.e. no descriptor fiddling and only use the syscalls defined in sdklib and/or krnllib excluding the HP Prime ones) when implementing relavent features (WIP)',
+)

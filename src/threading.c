@@ -4,10 +4,12 @@
 #include <muteki/threading.h>
 #include <mutekix/threading.h>
 
+#ifdef MUTEKIX_PROVIDE_TLS
+
 thread_t *mutekix_thread_get_current() {
     critical_section_t cs;
 
-#if (defined(MUTEKIX_USE_ONLY_PUBLIC_INTERFACES) && MUTEKIX_USE_ONLY_PUBLIC_INTERFACES != 0)
+#ifdef MUTEKIX_USE_ONLY_PUBLIC_INTERFACES
     /* Critical section holds a pointer that points to the current thread. This
      * function uses this property to get the descriptor of current running thread
      * by create and acquire a critical section, read out the pointer and clean
@@ -27,7 +29,7 @@ thread_t *mutekix_thread_get_current() {
     cs.refcount = 0;
     OSEnterCriticalSection(&cs);
     return cs.thr;
-#endif
+#endif // MUTEKIX_USE_ONLY_PUBLIC_INTERFACES
 }
 
 // TLS
@@ -185,3 +187,5 @@ void __aeabi_read_tp() {
         "bx lr"
     );
 }
+
+#endif // MUTEKIX_PROVIDE_TLS
