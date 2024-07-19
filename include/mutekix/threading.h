@@ -24,7 +24,7 @@ typedef struct {
  * This wrapper ensures the stack alignment and uses BX to invoke the real function to properly set the THUMB bit when jumping to it.
  * @param arg The real function and its user data pointer.
  */
-extern void mutekix_thread_wrapper(void *arg);
+extern int mutekix_thread_wrapper(void *arg);
 
 /**
  * @brief Get descriptor of current running thread.

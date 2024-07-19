@@ -5,9 +5,9 @@
 
 #include <muteki/common.h>
 #include <muteki/threading.h>
-#include <muteki/utils.h>
 #include <muteki/ui/canvas.h>
 #include <muteki/ui/event.h>
+#include <muteki/ui/font.h>
 
 #include <mutekix/console.h>
 
@@ -369,7 +369,7 @@ void mutekix_console_init(const mutekix_console_palette_t *palette) {
     fbcon_config.font_height = GetFontHeight(fbcon_config.font_type);
     SetFontType(fbcon_config.font_type);
     if (palette == NULL) {
-        vram_descriptor_t *fbdesc = GetActiveVRamAddress();
+        lcd_surface_t *fbdesc = GetActiveLCD()->surface;
         // If the color depth is <= 4 bit, assuming it's grayscale.
         if (fbdesc->depth <= 4) {
             fbcon_config.palette = &MUTEKIX_CONSOLE_PALETTE_GRAY;
