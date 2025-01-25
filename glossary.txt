@@ -1,0 +1,61 @@
+// This file defines several common terms as documentation fragments so they don't have to be typed out multiple times.
+// Include terms defined here in the documentation with the custom command
+// @x_term ( term_id )
+
+//! [require-krnllib]
+Requires `-lkrnllib` when dynamically linking with the shims.
+//! [require-krnllib]
+
+//! [sbz]
+Reserved. Should be set to 0.
+//! [sbz]
+
+//! [padding]
+Manual padding. Should not be set.
+//! [padding]
+
+//! [ok]
+The operation was completed successfully.
+//! [ok]
+
+//! [ng]
+The operation failed with error.
+//! [ng]
+
+//! [x0]
+X coordinate of the top-left corner, in pixels (inclusive).
+//! [x0]
+
+//! [x1]
+X coordinate of the bottom-right corner, in pixels (inclusive).
+//! [x1]
+
+//! [y0]
+Y coordinate of the top-left corner, in pixels (inclusive).
+//! [y0]
+
+//! [y1]
+Y coordinate of the bottom-right corner, in pixels (inclusive).
+//! [y1]
+
+//! [x1-auto]
+X coordinate of the bottom-right corner, in pixels (inclusive), or 0 to let the function automatically decide the size.
+//! [x1-auto]
+
+//! [y1-auto]
+Y coordinate of the bottom-right corner, in pixels (inclusive), or 0 to let the function automatically decide the size.
+//! [y1-auto]
+
+//! [tag]
+Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component). Does not need to be unique. Usually will be set by AllocBlock() after the memory was allocated.
+//! [tag]
+
+//! [void-param]
+@par Parameters
+    None.
+//! [void-param]
+
+//! [void-return]
+@par Returns
+    None.
+//! [void-return]
