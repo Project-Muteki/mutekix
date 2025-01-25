@@ -1,0 +1,19 @@
+var NAVTREEINDEX0 =
+{
+"annotated.html":[1,0],
+"classes.html":[1,1],
+"console_8h_source.html":[2,0,0,0,0],
+"dir_ce225401684c5e3532f3c43b14dc3b6f.html":[2,0,0,0],
+"dir_d44c64559bbebec7f509842c48db8b23.html":[2,0,0],
+"files.html":[2,0],
+"functions.html":[1,2,0],
+"functions_vars.html":[1,2,1],
+"index.html":[],
+"index.html":[0],
+"pages.html":[],
+"structmutekix__console__palette__t.html":[1,0,0],
+"structmutekix__thread__arg__t.html":[1,0,1],
+"structmutekix__thread__arg__t.html#a12edce4fb6bd4b5535961f143617e1ee":[1,0,1,0],
+"structmutekix__thread__arg__t.html#aa6f4ed382b57c177371a26e0912516f2":[1,0,1,1],
+"threading_8h_source.html":[2,0,0,0,1]
+};
