@@ -1,3 +1,9 @@
+/**
+ * @file threading.h
+ * @brief Threading helpers.
+ * @details Contains low-level TLS helper routines and wrappers for creating new Besta RTOS threads that work well with EABI and TLS.
+ */
+
 #ifndef __MUTEKIX_THREAD_WRAPPER_H__
 #define __MUTEKIX_THREAD_WRAPPER_H__
 
@@ -23,17 +29,18 @@ typedef struct {
  *
  * This wrapper ensures the stack alignment and uses BX to invoke the real function to properly set the THUMB bit when jumping to it.
  * @param arg The real function and its user data pointer.
+ * @return Thread exit code.
  */
 extern int mutekix_thread_wrapper(void *arg);
 
 /**
  * @brief Get descriptor of current running thread.
- *
+ * @x_void_param
  * @return The descriptor of current running thread.
  */
 extern thread_t *mutekix_thread_get_current();
 
-/** Max TLS key allowed. */
+/** @brief Max TLS key allowed. */
 static const unsigned int MUTEKIX_TLS_KEY_MAX = sizeof(((thread_t *) NULL)->unk_0x34) - 1;
 
 #define MUTEKIX_TLS_KEY_TLS 0
@@ -145,7 +152,7 @@ extern void *mutekix_tls_alloc_self(unsigned int key, size_t bytes);
  *
  * @param thr Thread descriptor.
  * @param key TLS key.
- * @param 0 on success, -1 on failure.
+ * @return 0 on success, -1 on failure.
  */
 extern int mutekix_tls_free(thread_t *thr, unsigned int key);
 
@@ -155,7 +162,7 @@ extern int mutekix_tls_free(thread_t *thr, unsigned int key);
  * The behavior of calling this with a key previously set with methods other than mutekix_tls_alloc() or mutekix_tls_alloc_self() is undefined.
  *
  * @param key TLS key.
- * @param 0 on success, -1 on failure.
+ * @return 0 on success, -1 on failure.
  */
 extern int mutekix_tls_free_self(unsigned int key);
 
