@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['mutekix_0',['mutekix',['../index.html',1,'']]],
-  ['mutekix_5fconsole_5fpalette_5ft_1',['mutekix_console_palette_t',['../structmutekix__console__palette__t.html',1,'']]],
-  ['mutekix_5fthread_5farg_5ft_2',['mutekix_thread_arg_t',['../structmutekix__thread__arg__t.html',1,'']]]
+  ['func_0',['func',['../structmutekix__thread__arg__t.html#a12edce4fb6bd4b5535961f143617e1ee',1,'mutekix_thread_arg_t']]]
 ];

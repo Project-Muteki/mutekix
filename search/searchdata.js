@@ -1,24 +1,30 @@
 var indexSectionsWithContent =
 {
-  0: "fmu",
+  0: "cfmtu",
   1: "m",
-  2: "fu",
-  3: "m"
+  2: "ct",
+  3: "m",
+  4: "fmu",
+  5: "m"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "variables",
-  3: "pages"
+  2: "files",
+  3: "functions",
+  4: "variables",
+  5: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Data Structures",
-  2: "Variables",
-  3: "Pages"
+  2: "Files",
+  3: "Functions",
+  4: "Variables",
+  5: "Pages"
 };
 

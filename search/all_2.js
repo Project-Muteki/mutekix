@@ -1,4 +1,29 @@
 var searchData=
 [
-  ['user_5fdata_0',['user_data',['../structmutekix__thread__arg__t.html#aa6f4ed382b57c177371a26e0912516f2',1,'mutekix_thread_arg_t']]]
+  ['mutekix_0',['mutekix',['../index.html',1,'']]],
+  ['mutekix_5fconsole_5fclear_1',['mutekix_console_clear',['../console_8h.html#a9040ee403642eaca411832bbd048f025',1,'console.h']]],
+  ['mutekix_5fconsole_5ffini_2',['mutekix_console_fini',['../console_8h.html#a010e539b1948eb5c92ff31aee07ac109',1,'console.h']]],
+  ['mutekix_5fconsole_5fgetchar_3',['mutekix_console_getchar',['../console_8h.html#a4d38dc44efbec9dd54f716528ac2f186',1,'console.h']]],
+  ['mutekix_5fconsole_5finit_4',['mutekix_console_init',['../console_8h.html#a50f50481ca1ef06d4991e30a0694c0e6',1,'console.h']]],
+  ['mutekix_5fconsole_5fpalette_5fdefault_5',['MUTEKIX_CONSOLE_PALETTE_DEFAULT',['../console_8h.html#a2bd76e74a79e88c47615555a710e1221',1,'console.h']]],
+  ['mutekix_5fconsole_5fpalette_5fgray_6',['MUTEKIX_CONSOLE_PALETTE_GRAY',['../console_8h.html#ae8c896e9b63bed5b77b6d6b863d31fe4',1,'console.h']]],
+  ['mutekix_5fconsole_5fpalette_5ft_7',['mutekix_console_palette_t',['../structmutekix__console__palette__t.html',1,'']]],
+  ['mutekix_5fconsole_5fprintf_8',['mutekix_console_printf',['../console_8h.html#af41f8168502cafda67d19ed999a16617',1,'console.h']]],
+  ['mutekix_5fconsole_5fputs_9',['mutekix_console_puts',['../console_8h.html#a46b39d7310d14d727baf89235b39d0ce',1,'console.h']]],
+  ['mutekix_5fconsole_5fwrite_10',['mutekix_console_write',['../console_8h.html#a71bff6f818d6bad08e41897ac616e586',1,'console.h']]],
+  ['mutekix_5fthread_5farg_5ft_11',['mutekix_thread_arg_t',['../structmutekix__thread__arg__t.html',1,'']]],
+  ['mutekix_5fthread_5fget_5fcurrent_12',['mutekix_thread_get_current',['../threading_8h.html#a7883cb7d34e486718c9c8051ee98ba1c',1,'threading.h']]],
+  ['mutekix_5fthread_5fwrapper_13',['mutekix_thread_wrapper',['../threading_8h.html#aae466dd0b3b0b95c91a67c8fe276d5d3',1,'threading.h']]],
+  ['mutekix_5ftls_5falloc_14',['mutekix_tls_alloc',['../threading_8h.html#a2c384b08739b9d75f37c2193501a8c58',1,'threading.h']]],
+  ['mutekix_5ftls_5falloc_5fself_15',['mutekix_tls_alloc_self',['../threading_8h.html#ad1432dad3e2a6a4686ace86c2b7f7b54',1,'threading.h']]],
+  ['mutekix_5ftls_5ffree_16',['mutekix_tls_free',['../threading_8h.html#a5c06cc5dba9e989e999c2163891faef8',1,'threading.h']]],
+  ['mutekix_5ftls_5ffree_5fself_17',['mutekix_tls_free_self',['../threading_8h.html#a07cec46a085173082e0536c615ed77fd',1,'threading.h']]],
+  ['mutekix_5ftls_5fget_18',['mutekix_tls_get',['../threading_8h.html#a7d39828a1f0dbc9e9468f1b24147b38c',1,'threading.h']]],
+  ['mutekix_5ftls_5fget_5fself_19',['mutekix_tls_get_self',['../threading_8h.html#ab96824c76db16dd4195c88e2c480f838',1,'threading.h']]],
+  ['mutekix_5ftls_5fgetvalue_20',['mutekix_tls_getvalue',['../threading_8h.html#a95a43b2c6b97932831058e915d92fa39',1,'threading.h']]],
+  ['mutekix_5ftls_5fgetvalue_5fself_21',['mutekix_tls_getvalue_self',['../threading_8h.html#a661c0a847d2c3118b11c6f5e6360fb35',1,'threading.h']]],
+  ['mutekix_5ftls_5finit_22',['mutekix_tls_init',['../threading_8h.html#aff00505d4c5741e9a2a92dd1d5c327da',1,'threading.h']]],
+  ['mutekix_5ftls_5finit_5fself_23',['mutekix_tls_init_self',['../threading_8h.html#a7b4adfc29f5a9b2f74426fc46bcc06ca',1,'threading.h']]],
+  ['mutekix_5ftls_5fset_24',['mutekix_tls_set',['../threading_8h.html#ae14e7f607533f3627c599b8e620cfda3',1,'threading.h']]],
+  ['mutekix_5ftls_5fset_5fself_25',['mutekix_tls_set_self',['../threading_8h.html#a222f02190126f954151c615702c36224',1,'threading.h']]]
 ];

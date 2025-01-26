@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['user_5fdata_0',['user_data',['../structmutekix__thread__arg__t.html#aa6f4ed382b57c177371a26e0912516f2',1,'mutekix_thread_arg_t']]]
+  ['mutekix_5fconsole_5fpalette_5fdefault_0',['MUTEKIX_CONSOLE_PALETTE_DEFAULT',['../console_8h.html#a2bd76e74a79e88c47615555a710e1221',1,'console.h']]],
+  ['mutekix_5fconsole_5fpalette_5fgray_1',['MUTEKIX_CONSOLE_PALETTE_GRAY',['../console_8h.html#ae8c896e9b63bed5b77b6d6b863d31fe4',1,'console.h']]]
 ];
