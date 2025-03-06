@@ -2,7 +2,7 @@
 #include <string.h>
 
 #include <muteki/threading.h>
-#include <mutekix/threading.h>
+#include "mutekix/threading.h"
 
 #ifdef MUTEKIX_PROVIDE_TLS
 

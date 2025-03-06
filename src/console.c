@@ -9,7 +9,7 @@
 #include <muteki/ui/event.h>
 #include <muteki/ui/font.h>
 
-#include <mutekix/console.h>
+#include "mutekix/console.h"
 
 static const unsigned int FLAG_SHIFT = 1;
 static const unsigned int FLAG_CAPS = (1 << 1);
