@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['func_0',['func',['../structmutekix__thread__arg__t.html#a12edce4fb6bd4b5535961f143617e1ee',1,'mutekix_thread_arg_t']]]
+  ['_5fval_20valsuffix_20name_5ft_20container_20keyargs_20valargs_20tt_20for_20associative_20array_0',['&lt;tt&gt;void name_emplace_key[keysuffix]_val[valsuffix](name_t container, keyargs..., valargs...)&lt;/tt&gt; [for associative array]',['../index.html#autotoc_md74',1,'']]]
 ];

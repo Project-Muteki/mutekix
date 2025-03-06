@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['p_20tt_0',['&lt;tt&gt;void name_free(name_t m, type *p)&lt;/tt&gt;',['../index.html#autotoc_md863',1,'']]],
+  ['p_5ft_1',['p_t',['../structp__t.html',1,'']]],
+  ['param_5fname_5f1_20callback_5fcore_20self_5fmember1_20self_5ftype1_20self_5foplist1_20tt_2',['param_name_1 callback_core self_member1 self_type1 self_oplist1 tt',['../index.html#autotoc_md844',1,'&lt;tt&gt;FUNC_OBJ_INS_DEF(name, interface_name, (param_name_1, ...), { callback_core }, (self_member1, self_type1[, self_oplist1]), ...)&lt;/tt&gt;'],['../index.html#autotoc_md845',1,'&lt;tt&gt;FUNC_OBJ_INS_DEF_AS(name, name_t, interface_name, (param_name_1, ...), { callback_core }, (self_member1, self_type1[, self_oplist1]), ...)&lt;/tt&gt;']]],
+  ['performance_3',['Performance',['../index.html#autotoc_md12',1,'']]],
+  ['policy_20oplist_4',['policy oplist',['../index.html#autotoc_md328',1,'BUFFER_DEF(name, type, size, policy[, oplist])'],['../index.html#autotoc_md329',1,'BUFFER_DEF_AS(name,  name_t, type, size, policy[, oplist])']]],
+  ['policy_20oplist_20tt_5',['policy oplist tt',['../index.html#autotoc_md340',1,'&lt;tt&gt;QUEUE_MPMC_DEF(name, type, policy[, oplist])&lt;/tt&gt;'],['../index.html#autotoc_md341',1,'&lt;tt&gt;QUEUE_MPMC_DEF_AS(name, name_t, type, policy[, oplist])&lt;/tt&gt;'],['../index.html#autotoc_md350',1,'&lt;tt&gt;QUEUE_SPSC_DEF(name, type, policy[, oplist])&lt;/tt&gt;'],['../index.html#autotoc_md351',1,'&lt;tt&gt;QUEUE_SPSC_DEF_AS(name, name_t, type, policy[, oplist])&lt;/tt&gt;']]],
+  ['pos_20size_5ft_20len_20const_20char_20str2_20tt_6',['&lt;tt&gt;void string_replace_at (string_t v, size_t pos, size_t len, const char str2[])&lt;/tt&gt;',['../index.html#autotoc_md574',1,'']]],
+  ['pos_20tt_7',['&lt;tt&gt;void string_it_pos(string_it_t it, const string_t str, size_t pos)&lt;/tt&gt;',['../index.html#autotoc_md600',1,'']]],
+  ['position_20containersrc_20containersrcoplist_20tt_8',['&lt;tt&gt;ALGO_INSERT_AT(containerDst, containerDstOPLIST, position, containerSrc, containerSrcOPLIST)&lt;/tt&gt;',['../index.html#autotoc_md838',1,'']]],
+  ['position_20tt_9',['&lt;tt&gt;void name_pop_until(name_t array, array_it_t position)&lt;/tt&gt;',['../index.html#autotoc_md151',1,'']]],
+  ['position_20type_20obj_20tt_10',['&lt;tt&gt;void name_push_after(type *position, type *obj)&lt;/tt&gt;',['../index.html#autotoc_md449',1,'']]],
+  ['pred_20type_5ft_20const_20data_20tt_11',['&lt;tt&gt;size_t name_count_if(const container_t c, bool (*pred)(type_t const data))&lt;/tt&gt;',['../index.html#autotoc_md798',1,'']]],
+  ['pred_20type_5ft_20const_20tt_12',['pred type_t const tt',['../index.html#autotoc_md794',1,'&lt;tt&gt;void name_find_again_if(it_t it, bool (*pred)(type_t const))&lt;/tt&gt;'],['../index.html#autotoc_md793',1,'&lt;tt&gt;void name_find_if(it_t it, const container_t c, bool (*pred)(type_t const))&lt;/tt&gt;']]],
+  ['preprocessing_20macro_20extension_13',['Preprocessing macro extension',['../index.html#autotoc_md619',1,'']]],
+  ['prioqueue_14',['M-PRIOQUEUE',['../index.html#autotoc_md317',1,'']]],
+  ['prioqueue_5fdef_20name_20type_20oplist_20tt_15',['&lt;tt&gt;PRIOQUEUE_DEF(name, type [, oplist])&lt;/tt&gt;',['../index.html#autotoc_md318',1,'']]],
+  ['prioqueue_5fdef_5fas_20name_20name_5ft_20name_5fit_5ft_20type_20oplist_20tt_16',['&lt;tt&gt;PRIOQUEUE_DEF_AS(name,  name_t, name_it_t, type [, oplist])&lt;/tt&gt;',['../index.html#autotoc_md319',1,'']]],
+  ['prioqueue_5foplist_20name_20oplist_20tt_17',['&lt;tt&gt;PRIOQUEUE_OPLIST(name, [, oplist])&lt;/tt&gt;',['../index.html#autotoc_md320',1,'']]],
+  ['program_5ft_18',['program_t',['../structprogram__t.html',1,'']]],
+  ['properties_19',['Properties',['../index.html#autotoc_md21',1,'']]],
+  ['propname_20tt_20',['&lt;tt&gt;M_GET_PROPERTY(oplist, propname)&lt;/tt&gt;',['../index.html#autotoc_md725',1,'']]],
+  ['ptr_20fieldtype_20field_20tt_21',['&lt;tt&gt;M_TYPE_FROM_FIELD(type, ptr, fieldType, field)&lt;/tt&gt;',['../index.html#autotoc_md696',1,'']]],
+  ['ptr_20number_20tt_22',['&lt;tt&gt;type *M_MEMORY_REALLOC (type, ptr, number)&lt;/tt&gt;',['../index.html#autotoc_md741',1,'']]],
+  ['ptr_20tt_23',['ptr tt',['../index.html#autotoc_md740',1,'&lt;tt&gt;void M_MEMORY_DEL (type *ptr)&lt;/tt&gt;'],['../index.html#autotoc_md742',1,'&lt;tt&gt;void M_MEMORY_FREE (type *ptr)&lt;/tt&gt;']]]
+];

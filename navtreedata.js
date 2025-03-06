@@ -25,7 +25,17 @@
 var NAVTREE =
 [
   [ "muteki-shims", "index.html", [
-    [ "mutekix", "index.html", null ],
+    [ "M*LIB: Generic type-safe Container Library for C language", "index.html", "index" ],
+    [ "How to make a release?", "md_include_2mutekix_2mlib_2doc_2DEV.html", [
+      [ "List of automatically tested systems", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md0", null ],
+      [ "List of manually tested systems", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md1", null ],
+      [ "Atomic library", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md2", null ],
+      [ "Cross compilation", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md3", null ],
+      [ "Handling issues", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md4", null ],
+      [ "Debugging", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md5", null ],
+      [ "Coding rules", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md6", null ],
+      [ "Misc", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md7", null ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -47,7 +57,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"index.html#autotoc_md313",
+"index.html#autotoc_md557",
+"index.html#autotoc_md806"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
