@@ -7,6 +7,7 @@ sources = [
     'src/assets.c',
     'src/console.c',
     'src/threading.c',
+    'src/time.c',
     'src/thread_wrapper_armv4T.s',
 ]
 
