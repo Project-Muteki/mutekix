@@ -6,6 +6,8 @@
 #ifndef __MUTEKIX_CONSOLE_H__
 #define __MUTEKIX_CONSOLE_H__
 
+#include <stdlib.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
