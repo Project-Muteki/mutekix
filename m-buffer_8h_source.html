@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('m-buffer_8h_source.html',''); initResi
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * M*LIB - Fixed size (Bounded) QUEUE &amp; STACK interface</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2024, Patrick Pelissier</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2025, Patrick Pelissier</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * All rights reserved.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
@@ -275,7 +275,7 @@ $(document).ready(function(){initNavTree('m-buffer_8h_source.html',''); initResi
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>M_INLINE <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>m_buff3r_number_load(m_buff3r_number_ct n, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> policy)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>m_buff3r_number_load(<span class="keyword">const</span> m_buff3r_number_ct n, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> policy)</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>{</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="keywordflow">if</span> (!M_BUFF3R_POLICY_P(policy, M_BUFFER_THREAD_UNSAFE))</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="comment">// Perform a memory acquire so that further usage of the buffer</span></div>
@@ -640,7 +640,7 @@ $(document).ready(function(){initNavTree('m-buffer_8h_source.html',''); initResi
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span><span class="preprocessor"> }                                                                            \</span></div>
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span><span class="preprocessor">                                                                              \</span></div>
 <div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span><span class="preprocessor"> M_INLINE bool                                                                \</span></div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span><span class="preprocessor"> M_F(name, _empty_p)(buffer_t v)                                              \</span></div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span><span class="preprocessor"> M_F(name, _empty_p)(const buffer_t v)                                        \</span></div>
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span><span class="preprocessor"> {                                                                            \</span></div>
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span><span class="preprocessor">   M_BUFF3R_CONTRACT(v,m_size);                                               \</span></div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span><span class="preprocessor">   </span><span class="comment">/* If the buffer has been configured with deferred pop                     \</span></div>
@@ -654,7 +654,7 @@ $(document).ready(function(){initNavTree('m-buffer_8h_source.html',''); initResi
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span><span class="preprocessor"> }                                                                            \</span></div>
 <div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span><span class="preprocessor">                                                                              \</span></div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span><span class="preprocessor"> M_INLINE bool                                                                \</span></div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span><span class="preprocessor"> M_F(name, _full_p)(buffer_t v)                                               \</span></div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span><span class="preprocessor"> M_F(name, _full_p)(const buffer_t v)                                         \</span></div>
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span><span class="preprocessor"> {                                                                            \</span></div>
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span><span class="preprocessor">   M_BUFF3R_CONTRACT(v,m_size);                                               \</span></div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span><span class="preprocessor">   return m_buff3r_number_load (v-&gt;number[0], policy)                         \</span></div>
@@ -662,7 +662,7 @@ $(document).ready(function(){initNavTree('m-buffer_8h_source.html',''); initResi
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span><span class="preprocessor"> }                                                                            \</span></div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span><span class="preprocessor">                                                                              \</span></div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span><span class="preprocessor"> M_INLINE size_t                                                              \</span></div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span><span class="preprocessor"> M_F(name, _size)(buffer_t v)                                                 \</span></div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span><span class="preprocessor"> M_F(name, _size)(const buffer_t v)                                           \</span></div>
 <div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span><span class="preprocessor"> {                                                                            \</span></div>
 <div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span><span class="preprocessor">   M_BUFF3R_CONTRACT(v,m_size);                                               \</span></div>
 <div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span><span class="preprocessor">   return m_buff3r_number_load (v-&gt;number[0], policy);                        \</span></div>
@@ -1428,39 +1428,40 @@ $(document).ready(function(){initNavTree('m-buffer_8h_source.html',''); initResi
 <div class="line"><a id="l01315" name="l01315"></a><span class="lineno"> 1315</span><span class="preprocessor">   ,POP(M_F(name,_pop))                                                       \</span></div>
 <div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span><span class="preprocessor">   ,OPLIST(oplist)                                                            \</span></div>
 <div class="line"><a id="l01317" name="l01317"></a><span class="lineno"> 1317</span><span class="preprocessor">   ,EMPTY_P(M_F(name, _empty_p)),                                             \</span></div>
-<div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span><span class="preprocessor">   ,GET_SIZE(M_F(name, _size))                                                \</span></div>
-<div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span><span class="preprocessor">   )</span></div>
-<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span> </div>
+<div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span><span class="preprocessor">   ,FULL_P(M_F(name, _full_p)),                                               \</span></div>
+<div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span><span class="preprocessor">   ,GET_SIZE(M_F(name, _size))                                                \</span></div>
+<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span><span class="preprocessor">   )</span></div>
 <div class="line"><a id="l01321" name="l01321"></a><span class="lineno"> 1321</span> </div>
-<div class="line"><a id="l01322" name="l01322"></a><span class="lineno"> 1322</span><span class="comment">/********************************** INTERNAL *********************************/</span></div>
-<div class="line"><a id="l01323" name="l01323"></a><span class="lineno"> 1323</span> </div>
-<div class="line"><a id="l01324" name="l01324"></a><span class="lineno"> 1324</span><span class="preprocessor">#if M_USE_SMALL_NAME</span></div>
-<div class="line"><a id="l01325" name="l01325"></a><span class="lineno"> 1325</span><span class="preprocessor">#define BUFFER_DEF M_BUFFER_DEF</span></div>
-<div class="line"><a id="l01326" name="l01326"></a><span class="lineno"> 1326</span><span class="preprocessor">#define BUFFER_DEF_AS M_BUFFER_DEF_AS</span></div>
-<div class="line"><a id="l01327" name="l01327"></a><span class="lineno"> 1327</span><span class="preprocessor">#define BUFFER_OPLIST M_BUFFER_OPLIST</span></div>
-<div class="line"><a id="l01328" name="l01328"></a><span class="lineno"> 1328</span><span class="preprocessor">#define QUEUE_MPMC_DEF M_QUEUE_MPMC_DEF</span></div>
-<div class="line"><a id="l01329" name="l01329"></a><span class="lineno"> 1329</span><span class="preprocessor">#define QUEUE_MPMC_DEF_AS M_QUEUE_MPMC_DEF_AS</span></div>
-<div class="line"><a id="l01330" name="l01330"></a><span class="lineno"> 1330</span><span class="preprocessor">#define QUEUE_SPSC_DEF M_QUEUE_SPSC_DEF</span></div>
-<div class="line"><a id="l01331" name="l01331"></a><span class="lineno"> 1331</span><span class="preprocessor">#define QUEUE_SPSC_DEF_AS M_QUEUE_SPSC_DEF_AS</span></div>
-<div class="line"><a id="l01332" name="l01332"></a><span class="lineno"> 1332</span> </div>
-<div class="line"><a id="l01333" name="l01333"></a><span class="lineno"> 1333</span><span class="preprocessor">#define buffer_policy_e m_buffer_policy_e</span></div>
-<div class="line"><a id="l01334" name="l01334"></a><span class="lineno"> 1334</span><span class="preprocessor">#define BUFFER_QUEUE M_BUFFER_QUEUE</span></div>
-<div class="line"><a id="l01335" name="l01335"></a><span class="lineno"> 1335</span><span class="preprocessor">#define BUFFER_STACK M_BUFFER_STACK</span></div>
-<div class="line"><a id="l01336" name="l01336"></a><span class="lineno"> 1336</span><span class="preprocessor">#define BUFFER_BLOCKING_PUSH M_BUFFER_BLOCKING_PUSH</span></div>
-<div class="line"><a id="l01337" name="l01337"></a><span class="lineno"> 1337</span><span class="preprocessor">#define BUFFER_UNBLOCKING_PUSH M_BUFFER_UNBLOCKING_PUSH</span></div>
-<div class="line"><a id="l01338" name="l01338"></a><span class="lineno"> 1338</span><span class="preprocessor">#define BUFFER_BLOCKING_POP M_BUFFER_BLOCKING_POP</span></div>
-<div class="line"><a id="l01339" name="l01339"></a><span class="lineno"> 1339</span><span class="preprocessor">#define BUFFER_UNBLOCKING_POP M_BUFFER_UNBLOCKING_POP</span></div>
-<div class="line"><a id="l01340" name="l01340"></a><span class="lineno"> 1340</span><span class="preprocessor">#define BUFFER_BLOCKING M_BUFFER_BLOCKING</span></div>
-<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span><span class="preprocessor">#define BUFFER_UNBLOCKING M_BUFFER_UNBLOCKING</span></div>
-<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span><span class="preprocessor">#define BUFFER_THREAD_SAFE M_BUFFER_THREAD_SAFE</span></div>
-<div class="line"><a id="l01343" name="l01343"></a><span class="lineno"> 1343</span><span class="preprocessor">#define BUFFER_THREAD_UNSAFE M_BUFFER_THREAD_UNSAFE</span></div>
-<div class="line"><a id="l01344" name="l01344"></a><span class="lineno"> 1344</span><span class="preprocessor">#define BUFFER_PUSH_INIT_POP_MOVE M_BUFFER_PUSH_INIT_POP_MOVE</span></div>
-<div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span><span class="preprocessor">#define BUFFER_PUSH_OVERWRITE M_BUFFER_PUSH_OVERWRITE</span></div>
-<div class="line"><a id="l01346" name="l01346"></a><span class="lineno"> 1346</span><span class="preprocessor">#define BUFFER_DEFERRED_POP M_BUFFER_DEFERRED_POP</span></div>
-<div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span> </div>
-<div class="line"><a id="l01348" name="l01348"></a><span class="lineno"> 1348</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span> </div>
-<div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01322" name="l01322"></a><span class="lineno"> 1322</span> </div>
+<div class="line"><a id="l01323" name="l01323"></a><span class="lineno"> 1323</span><span class="comment">/********************************** INTERNAL *********************************/</span></div>
+<div class="line"><a id="l01324" name="l01324"></a><span class="lineno"> 1324</span> </div>
+<div class="line"><a id="l01325" name="l01325"></a><span class="lineno"> 1325</span><span class="preprocessor">#if M_USE_SMALL_NAME</span></div>
+<div class="line"><a id="l01326" name="l01326"></a><span class="lineno"> 1326</span><span class="preprocessor">#define BUFFER_DEF M_BUFFER_DEF</span></div>
+<div class="line"><a id="l01327" name="l01327"></a><span class="lineno"> 1327</span><span class="preprocessor">#define BUFFER_DEF_AS M_BUFFER_DEF_AS</span></div>
+<div class="line"><a id="l01328" name="l01328"></a><span class="lineno"> 1328</span><span class="preprocessor">#define BUFFER_OPLIST M_BUFFER_OPLIST</span></div>
+<div class="line"><a id="l01329" name="l01329"></a><span class="lineno"> 1329</span><span class="preprocessor">#define QUEUE_MPMC_DEF M_QUEUE_MPMC_DEF</span></div>
+<div class="line"><a id="l01330" name="l01330"></a><span class="lineno"> 1330</span><span class="preprocessor">#define QUEUE_MPMC_DEF_AS M_QUEUE_MPMC_DEF_AS</span></div>
+<div class="line"><a id="l01331" name="l01331"></a><span class="lineno"> 1331</span><span class="preprocessor">#define QUEUE_SPSC_DEF M_QUEUE_SPSC_DEF</span></div>
+<div class="line"><a id="l01332" name="l01332"></a><span class="lineno"> 1332</span><span class="preprocessor">#define QUEUE_SPSC_DEF_AS M_QUEUE_SPSC_DEF_AS</span></div>
+<div class="line"><a id="l01333" name="l01333"></a><span class="lineno"> 1333</span> </div>
+<div class="line"><a id="l01334" name="l01334"></a><span class="lineno"> 1334</span><span class="preprocessor">#define buffer_policy_e m_buffer_policy_e</span></div>
+<div class="line"><a id="l01335" name="l01335"></a><span class="lineno"> 1335</span><span class="preprocessor">#define BUFFER_QUEUE M_BUFFER_QUEUE</span></div>
+<div class="line"><a id="l01336" name="l01336"></a><span class="lineno"> 1336</span><span class="preprocessor">#define BUFFER_STACK M_BUFFER_STACK</span></div>
+<div class="line"><a id="l01337" name="l01337"></a><span class="lineno"> 1337</span><span class="preprocessor">#define BUFFER_BLOCKING_PUSH M_BUFFER_BLOCKING_PUSH</span></div>
+<div class="line"><a id="l01338" name="l01338"></a><span class="lineno"> 1338</span><span class="preprocessor">#define BUFFER_UNBLOCKING_PUSH M_BUFFER_UNBLOCKING_PUSH</span></div>
+<div class="line"><a id="l01339" name="l01339"></a><span class="lineno"> 1339</span><span class="preprocessor">#define BUFFER_BLOCKING_POP M_BUFFER_BLOCKING_POP</span></div>
+<div class="line"><a id="l01340" name="l01340"></a><span class="lineno"> 1340</span><span class="preprocessor">#define BUFFER_UNBLOCKING_POP M_BUFFER_UNBLOCKING_POP</span></div>
+<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span><span class="preprocessor">#define BUFFER_BLOCKING M_BUFFER_BLOCKING</span></div>
+<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span><span class="preprocessor">#define BUFFER_UNBLOCKING M_BUFFER_UNBLOCKING</span></div>
+<div class="line"><a id="l01343" name="l01343"></a><span class="lineno"> 1343</span><span class="preprocessor">#define BUFFER_THREAD_SAFE M_BUFFER_THREAD_SAFE</span></div>
+<div class="line"><a id="l01344" name="l01344"></a><span class="lineno"> 1344</span><span class="preprocessor">#define BUFFER_THREAD_UNSAFE M_BUFFER_THREAD_UNSAFE</span></div>
+<div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span><span class="preprocessor">#define BUFFER_PUSH_INIT_POP_MOVE M_BUFFER_PUSH_INIT_POP_MOVE</span></div>
+<div class="line"><a id="l01346" name="l01346"></a><span class="lineno"> 1346</span><span class="preprocessor">#define BUFFER_PUSH_OVERWRITE M_BUFFER_PUSH_OVERWRITE</span></div>
+<div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span><span class="preprocessor">#define BUFFER_DEFERRED_POP M_BUFFER_DEFERRED_POP</span></div>
+<div class="line"><a id="l01348" name="l01348"></a><span class="lineno"> 1348</span> </div>
+<div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span> </div>
+<div class="line"><a id="l01351" name="l01351"></a><span class="lineno"> 1351</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aunionm__buff3r__number__s_html"><div class="ttname"><a href="unionm__buff3r__number__s.html">m_buff3r_number_s</a></div><div class="ttdef"><b>Definition</b> m-buffer.h:146</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

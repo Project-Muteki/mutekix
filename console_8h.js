@@ -1,9 +1,9 @@
 var console_8h =
 [
     [ "mutekix_console_palette_t", "structmutekix__console__palette__t.html", null ],
-    [ "mutekix_console_clear", "console_8h.html#a9040ee403642eaca411832bbd048f025", null ],
-    [ "mutekix_console_fini", "console_8h.html#a010e539b1948eb5c92ff31aee07ac109", null ],
-    [ "mutekix_console_getchar", "console_8h.html#a4d38dc44efbec9dd54f716528ac2f186", null ],
+    [ "mutekix_console_clear", "console_8h.html#ad610b5418e51ddcd3b88c17709cb69f7", null ],
+    [ "mutekix_console_fini", "console_8h.html#a13b2a8ece1c0e7ec9f093e9de6de1813", null ],
+    [ "mutekix_console_getchar", "console_8h.html#ad23a74d79af79c73409dda59c684a4d1", null ],
     [ "mutekix_console_init", "console_8h.html#a50f50481ca1ef06d4991e30a0694c0e6", null ],
     [ "mutekix_console_printf", "console_8h.html#af41f8168502cafda67d19ed999a16617", null ],
     [ "mutekix_console_puts", "console_8h.html#a46b39d7310d14d727baf89235b39d0ce", null ],

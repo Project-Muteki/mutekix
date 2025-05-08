@@ -1,8 +1,8 @@
 var time_8h =
 [
-    [ "mutekix_time_fini", "time_8h.html#a8763c099a91e5b1df8a5f013917a9122", null ],
-    [ "mutekix_time_get_quantum", "time_8h.html#a04fef7be5a3bfb5b6aa49a19be51b8c3", null ],
-    [ "mutekix_time_get_ticks", "time_8h.html#ad41e44f8e5ed40a2679d42a475edf336", null ],
-    [ "mutekix_time_get_usecs", "time_8h.html#acdfc3478adf3888f3767da713092bc7c", null ],
-    [ "mutekix_time_init", "time_8h.html#a402494ef495b7bfe267adcdd6bbfd9fb", null ]
+    [ "mutekix_time_fini", "time_8h.html#a1063ad2f5118bea15d2f682e0df9409b", null ],
+    [ "mutekix_time_get_quantum", "time_8h.html#a5dd2e54a0c126bc59237df0956555dc5", null ],
+    [ "mutekix_time_get_ticks", "time_8h.html#a0f87a54eb8d13c9f2e60f27f37b9421e", null ],
+    [ "mutekix_time_get_usecs", "time_8h.html#ae163cc73af7096b2b4c8dfcd515af370", null ],
+    [ "mutekix_time_init", "time_8h.html#ad3bbe9cd53d6e018887da02cf18609a9", null ]
 ];

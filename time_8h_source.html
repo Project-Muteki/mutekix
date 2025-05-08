@@ -114,32 +114,31 @@ $(document).ready(function(){initNavTree('time_8h_source.html',''); initResizabl
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define __MUTEKIX_TIME_H__</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="time_8h.html#a402494ef495b7bfe267adcdd6bbfd9fb">   28</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="time_8h.html#a402494ef495b7bfe267adcdd6bbfd9fb">mutekix_time_init</a>();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="time_8h.html#a8763c099a91e5b1df8a5f013917a9122">   36</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="time_8h.html#a8763c099a91e5b1df8a5f013917a9122">mutekix_time_fini</a>();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="time_8h.html#acdfc3478adf3888f3767da713092bc7c">   42</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="time_8h.html#acdfc3478adf3888f3767da713092bc7c">mutekix_time_get_usecs</a>();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="time_8h.html#ad41e44f8e5ed40a2679d42a475edf336">   49</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="time_8h.html#ad41e44f8e5ed40a2679d42a475edf336">mutekix_time_get_ticks</a>();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="time_8h.html#a04fef7be5a3bfb5b6aa49a19be51b8c3">   55</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="time_8h.html#a04fef7be5a3bfb5b6aa49a19be51b8c3">mutekix_time_get_quantum</a>();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>} <span class="comment">// extern &quot;C&quot;</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">// __MUTEKIX_TIME_H__</span></div>
-<div class="ttc" id="atime_8h_html_a04fef7be5a3bfb5b6aa49a19be51b8c3"><div class="ttname"><a href="time_8h.html#a04fef7be5a3bfb5b6aa49a19be51b8c3">mutekix_time_get_quantum</a></div><div class="ttdeci">unsigned int mutekix_time_get_quantum()</div><div class="ttdoc">Get quantum (microseconds elapsed of each tick).</div></div>
-<div class="ttc" id="atime_8h_html_a402494ef495b7bfe267adcdd6bbfd9fb"><div class="ttname"><a href="time_8h.html#a402494ef495b7bfe267adcdd6bbfd9fb">mutekix_time_init</a></div><div class="ttdeci">bool mutekix_time_init()</div><div class="ttdoc">Initialize component, allocate required resources and reset the counters.</div></div>
-<div class="ttc" id="atime_8h_html_a8763c099a91e5b1df8a5f013917a9122"><div class="ttname"><a href="time_8h.html#a8763c099a91e5b1df8a5f013917a9122">mutekix_time_fini</a></div><div class="ttdeci">void mutekix_time_fini()</div><div class="ttdoc">Deinitialize component.</div></div>
-<div class="ttc" id="atime_8h_html_acdfc3478adf3888f3767da713092bc7c"><div class="ttname"><a href="time_8h.html#acdfc3478adf3888f3767da713092bc7c">mutekix_time_get_usecs</a></div><div class="ttdeci">unsigned long long mutekix_time_get_usecs()</div><div class="ttdoc">Get microseconds.</div></div>
-<div class="ttc" id="atime_8h_html_ad41e44f8e5ed40a2679d42a475edf336"><div class="ttname"><a href="time_8h.html#ad41e44f8e5ed40a2679d42a475edf336">mutekix_time_get_ticks</a></div><div class="ttdeci">unsigned long long mutekix_time_get_ticks()</div><div class="ttdoc">Get ticks.</div></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="time_8h.html#ad3bbe9cd53d6e018887da02cf18609a9">   27</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="time_8h.html#ad3bbe9cd53d6e018887da02cf18609a9">mutekix_time_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="time_8h.html#a1063ad2f5118bea15d2f682e0df9409b">   35</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="time_8h.html#a1063ad2f5118bea15d2f682e0df9409b">mutekix_time_fini</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="time_8h.html#ae163cc73af7096b2b4c8dfcd515af370">   41</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="time_8h.html#ae163cc73af7096b2b4c8dfcd515af370">mutekix_time_get_usecs</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="time_8h.html#a0f87a54eb8d13c9f2e60f27f37b9421e">   48</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="time_8h.html#a0f87a54eb8d13c9f2e60f27f37b9421e">mutekix_time_get_ticks</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="time_8h.html#a5dd2e54a0c126bc59237df0956555dc5">   54</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="time_8h.html#a5dd2e54a0c126bc59237df0956555dc5">mutekix_time_get_quantum</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// extern &quot;C&quot;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif </span><span class="comment">// __MUTEKIX_TIME_H__</span></div>
+<div class="ttc" id="atime_8h_html_a0f87a54eb8d13c9f2e60f27f37b9421e"><div class="ttname"><a href="time_8h.html#a0f87a54eb8d13c9f2e60f27f37b9421e">mutekix_time_get_ticks</a></div><div class="ttdeci">unsigned long long mutekix_time_get_ticks(void)</div><div class="ttdoc">Get ticks.</div></div>
+<div class="ttc" id="atime_8h_html_a1063ad2f5118bea15d2f682e0df9409b"><div class="ttname"><a href="time_8h.html#a1063ad2f5118bea15d2f682e0df9409b">mutekix_time_fini</a></div><div class="ttdeci">void mutekix_time_fini(void)</div><div class="ttdoc">Deinitialize component.</div></div>
+<div class="ttc" id="atime_8h_html_a5dd2e54a0c126bc59237df0956555dc5"><div class="ttname"><a href="time_8h.html#a5dd2e54a0c126bc59237df0956555dc5">mutekix_time_get_quantum</a></div><div class="ttdeci">unsigned int mutekix_time_get_quantum(void)</div><div class="ttdoc">Get quantum (microseconds elapsed of each tick).</div></div>
+<div class="ttc" id="atime_8h_html_ad3bbe9cd53d6e018887da02cf18609a9"><div class="ttname"><a href="time_8h.html#ad3bbe9cd53d6e018887da02cf18609a9">mutekix_time_init</a></div><div class="ttdeci">bool mutekix_time_init(void)</div><div class="ttdoc">Initialize component, allocate required resources and reset the counters.</div></div>
+<div class="ttc" id="atime_8h_html_ae163cc73af7096b2b4c8dfcd515af370"><div class="ttname"><a href="time_8h.html#ae163cc73af7096b2b4c8dfcd515af370">mutekix_time_get_usecs</a></div><div class="ttdeci">unsigned long long mutekix_time_get_usecs(void)</div><div class="ttdoc">Get microseconds.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

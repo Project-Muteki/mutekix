@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('m-algo_8h_source.html',''); initResiza
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * M*LIB - ALGO module</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2024, Patrick Pelissier</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2025, Patrick Pelissier</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * All rights reserved.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
@@ -289,11 +289,11 @@ $(document).ready(function(){initNavTree('m-algo_8h_source.html',''); initResiza
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment"> * Created Function objects are part of the public interface */</span></div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="preprocessor">#define M_ALG0_DEF_FUNCOBJ(name, container_t, cont_oplist, type_t, type_oplist, it_t) \</span></div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">                                                                              \</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="preprocessor">  FUNC_OBJ_ITF_DEF(M_F(name, _test_obj), bool, type_t const)                  \</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">  FUNC_OBJ_ITF_DEF(M_F(name, _eq_obj), bool, type_t const, type_t const )     \</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">  FUNC_OBJ_ITF_DEF(M_F(name, _cmp_obj), int, type_t const, type_t const )     \</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">  FUNC_OBJ_ITF_DEF(M_F(name, _transform_obj), void, type_t *, type_t const )  \</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">  FUNC_OBJ_ITF_DEF(M_F(name, _apply_obj), void, type_t * )                    \</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="preprocessor">  M_FUNC_OBJ_ITF_DEF(M_F(name, _test_obj), bool, type_t const)                \</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">  M_FUNC_OBJ_ITF_DEF(M_F(name, _eq_obj), bool, type_t const, type_t const )   \</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">  M_FUNC_OBJ_ITF_DEF(M_F(name, _cmp_obj), int, type_t const, type_t const )   \</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">  M_FUNC_OBJ_ITF_DEF(M_F(name, _transform_obj), void, type_t *, type_t const )\</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">  M_FUNC_OBJ_ITF_DEF(M_F(name, _apply_obj), void, type_t * )                  \</span></div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="preprocessor">  </span></div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">/* Define the sort functions with the CMP operator using the order selected */</span></div>

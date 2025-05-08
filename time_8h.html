@@ -110,34 +110,33 @@ $(document).ready(function(){initNavTree('time_8h.html',''); initResizable(); })
 <p>Utilities for time measurement.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
-<code>#include &lt;stdint.h&gt;</code><br />
 </div>
 <p><a href="time_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a402494ef495b7bfe267adcdd6bbfd9fb" id="r_a402494ef495b7bfe267adcdd6bbfd9fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#a402494ef495b7bfe267adcdd6bbfd9fb">mutekix_time_init</a> ()</td></tr>
-<tr class="memdesc:a402494ef495b7bfe267adcdd6bbfd9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize component, allocate required resources and reset the counters.  <br /></td></tr>
-<tr class="separator:a402494ef495b7bfe267adcdd6bbfd9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8763c099a91e5b1df8a5f013917a9122" id="r_a8763c099a91e5b1df8a5f013917a9122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#a8763c099a91e5b1df8a5f013917a9122">mutekix_time_fini</a> ()</td></tr>
-<tr class="memdesc:a8763c099a91e5b1df8a5f013917a9122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitialize component.  <br /></td></tr>
-<tr class="separator:a8763c099a91e5b1df8a5f013917a9122"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdfc3478adf3888f3767da713092bc7c" id="r_acdfc3478adf3888f3767da713092bc7c"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#acdfc3478adf3888f3767da713092bc7c">mutekix_time_get_usecs</a> ()</td></tr>
-<tr class="memdesc:acdfc3478adf3888f3767da713092bc7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get microseconds.  <br /></td></tr>
-<tr class="separator:acdfc3478adf3888f3767da713092bc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad41e44f8e5ed40a2679d42a475edf336" id="r_ad41e44f8e5ed40a2679d42a475edf336"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#ad41e44f8e5ed40a2679d42a475edf336">mutekix_time_get_ticks</a> ()</td></tr>
-<tr class="memdesc:ad41e44f8e5ed40a2679d42a475edf336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ticks.  <br /></td></tr>
-<tr class="separator:ad41e44f8e5ed40a2679d42a475edf336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04fef7be5a3bfb5b6aa49a19be51b8c3" id="r_a04fef7be5a3bfb5b6aa49a19be51b8c3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#a04fef7be5a3bfb5b6aa49a19be51b8c3">mutekix_time_get_quantum</a> ()</td></tr>
-<tr class="memdesc:a04fef7be5a3bfb5b6aa49a19be51b8c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get quantum (microseconds elapsed of each tick).  <br /></td></tr>
-<tr class="separator:a04fef7be5a3bfb5b6aa49a19be51b8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bbe9cd53d6e018887da02cf18609a9" id="r_ad3bbe9cd53d6e018887da02cf18609a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#ad3bbe9cd53d6e018887da02cf18609a9">mutekix_time_init</a> (void)</td></tr>
+<tr class="memdesc:ad3bbe9cd53d6e018887da02cf18609a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize component, allocate required resources and reset the counters.  <br /></td></tr>
+<tr class="separator:ad3bbe9cd53d6e018887da02cf18609a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1063ad2f5118bea15d2f682e0df9409b" id="r_a1063ad2f5118bea15d2f682e0df9409b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#a1063ad2f5118bea15d2f682e0df9409b">mutekix_time_fini</a> (void)</td></tr>
+<tr class="memdesc:a1063ad2f5118bea15d2f682e0df9409b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitialize component.  <br /></td></tr>
+<tr class="separator:a1063ad2f5118bea15d2f682e0df9409b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae163cc73af7096b2b4c8dfcd515af370" id="r_ae163cc73af7096b2b4c8dfcd515af370"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#ae163cc73af7096b2b4c8dfcd515af370">mutekix_time_get_usecs</a> (void)</td></tr>
+<tr class="memdesc:ae163cc73af7096b2b4c8dfcd515af370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get microseconds.  <br /></td></tr>
+<tr class="separator:ae163cc73af7096b2b4c8dfcd515af370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f87a54eb8d13c9f2e60f27f37b9421e" id="r_a0f87a54eb8d13c9f2e60f27f37b9421e"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#a0f87a54eb8d13c9f2e60f27f37b9421e">mutekix_time_get_ticks</a> (void)</td></tr>
+<tr class="memdesc:a0f87a54eb8d13c9f2e60f27f37b9421e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ticks.  <br /></td></tr>
+<tr class="separator:a0f87a54eb8d13c9f2e60f27f37b9421e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd2e54a0c126bc59237df0956555dc5" id="r_a5dd2e54a0c126bc59237df0956555dc5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time_8h.html#a5dd2e54a0c126bc59237df0956555dc5">mutekix_time_get_quantum</a> (void)</td></tr>
+<tr class="memdesc:a5dd2e54a0c126bc59237df0956555dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get quantum (microseconds elapsed of each tick).  <br /></td></tr>
+<tr class="separator:a5dd2e54a0c126bc59237df0956555dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utilities for time measurement. </p>
 <p>There is no standard way to measure time elapsed at millisecond-level on Besta RTOS. There is a millis field in the datetime_t struct but its behavior is not standard across devices. The purpose of this component is to provide a standard way of time measurement by choosing the best measurement method for each device, handling the device-specific behavior required by each known device type, and trying to fall back to a safe default if unexpected behavior is detected. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a8763c099a91e5b1df8a5f013917a9122" name="a8763c099a91e5b1df8a5f013917a9122"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8763c099a91e5b1df8a5f013917a9122">&#9670;&#160;</a></span>mutekix_time_fini()</h2>
+<a id="a1063ad2f5118bea15d2f682e0df9409b" name="a1063ad2f5118bea15d2f682e0df9409b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1063ad2f5118bea15d2f682e0df9409b">&#9670;&#160;</a></span>mutekix_time_fini()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,6 +144,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void mutekix_time_fini </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -160,8 +160,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a04fef7be5a3bfb5b6aa49a19be51b8c3" name="a04fef7be5a3bfb5b6aa49a19be51b8c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04fef7be5a3bfb5b6aa49a19be51b8c3">&#9670;&#160;</a></span>mutekix_time_get_quantum()</h2>
+<a id="a5dd2e54a0c126bc59237df0956555dc5" name="a5dd2e54a0c126bc59237df0956555dc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dd2e54a0c126bc59237df0956555dc5">&#9670;&#160;</a></span>mutekix_time_get_quantum()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,6 +169,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">unsigned int mutekix_time_get_quantum </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -180,8 +181,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad41e44f8e5ed40a2679d42a475edf336" name="ad41e44f8e5ed40a2679d42a475edf336"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad41e44f8e5ed40a2679d42a475edf336">&#9670;&#160;</a></span>mutekix_time_get_ticks()</h2>
+<a id="a0f87a54eb8d13c9f2e60f27f37b9421e" name="a0f87a54eb8d13c9f2e60f27f37b9421e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f87a54eb8d13c9f2e60f27f37b9421e">&#9670;&#160;</a></span>mutekix_time_get_ticks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,6 +190,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">unsigned long long mutekix_time_get_ticks </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -196,12 +198,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get ticks. </p>
-<p>Resolution of each tick may differ across devices. </p><dl class="section return"><dt>Returns</dt><dd>Ticks elapsed since <a class="el" href="time_8h.html#a402494ef495b7bfe267adcdd6bbfd9fb" title="Initialize component, allocate required resources and reset the counters.">mutekix_time_init()</a> was called. </dd></dl>
+<p>Resolution of each tick may differ across devices. </p><dl class="section return"><dt>Returns</dt><dd>Ticks elapsed since <a class="el" href="time_8h.html#ad3bbe9cd53d6e018887da02cf18609a9" title="Initialize component, allocate required resources and reset the counters.">mutekix_time_init()</a> was called. </dd></dl>
 
 </div>
 </div>
-<a id="acdfc3478adf3888f3767da713092bc7c" name="acdfc3478adf3888f3767da713092bc7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdfc3478adf3888f3767da713092bc7c">&#9670;&#160;</a></span>mutekix_time_get_usecs()</h2>
+<a id="ae163cc73af7096b2b4c8dfcd515af370" name="ae163cc73af7096b2b4c8dfcd515af370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae163cc73af7096b2b4c8dfcd515af370">&#9670;&#160;</a></span>mutekix_time_get_usecs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,6 +211,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">unsigned long long mutekix_time_get_usecs </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -216,12 +219,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get microseconds. </p>
-<dl class="section return"><dt>Returns</dt><dd>Microseconds elapsed since <a class="el" href="time_8h.html#a402494ef495b7bfe267adcdd6bbfd9fb" title="Initialize component, allocate required resources and reset the counters.">mutekix_time_init()</a> was called. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Microseconds elapsed since <a class="el" href="time_8h.html#ad3bbe9cd53d6e018887da02cf18609a9" title="Initialize component, allocate required resources and reset the counters.">mutekix_time_init()</a> was called. </dd></dl>
 
 </div>
 </div>
-<a id="a402494ef495b7bfe267adcdd6bbfd9fb" name="a402494ef495b7bfe267adcdd6bbfd9fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a402494ef495b7bfe267adcdd6bbfd9fb">&#9670;&#160;</a></span>mutekix_time_init()</h2>
+<a id="ad3bbe9cd53d6e018887da02cf18609a9" name="ad3bbe9cd53d6e018887da02cf18609a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3bbe9cd53d6e018887da02cf18609a9">&#9670;&#160;</a></span>mutekix_time_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,6 +232,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool mutekix_time_init </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

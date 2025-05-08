@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('m-snapshot_8h_source.html',''); initRe
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * M*LIB - SNAPSHOT Module</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2024, Patrick Pelissier</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2025, Patrick Pelissier</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * All rights reserved.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
@@ -887,7 +887,7 @@ $(document).ready(function(){initNavTree('m-snapshot_8h_source.html',''); initRe
 <div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span><span class="preprocessor">  {                                                                           \</span></div>
 <div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span><span class="preprocessor">    M_SNAPSH0T_SPMC_CONTRACT(snap-&gt;core);                                     \</span></div>
 <div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span><span class="preprocessor">    const M_F(name, _mrsw_aligned_type_ct) *oldx;                             \</span></div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span><span class="preprocessor">    oldx = M_CTYPE_FROM_FIELD(M_F(name, _mrsw_aligned_type_ct), old, type, x); \</span></div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span><span class="preprocessor">    oldx = (const M_F(name, _mrsw_aligned_type_ct) *) old;                    \</span></div>
 <div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span><span class="preprocessor">    M_ASSERT (oldx &gt;= snap-&gt;core-&gt;data);                                      \</span></div>
 <div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span><span class="preprocessor">    M_ASSERT (oldx &lt; snap-&gt;core-&gt;data + snap-&gt;core-&gt;core-&gt;n_reader + M_SNAPSH0T_SPMC_EXTRA_BUFFER); \</span></div>
 <div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span><span class="preprocessor">    M_ASSERT(snap-&gt;core-&gt;core-&gt;n_reader + M_SNAPSH0T_SPMC_EXTRA_BUFFER &lt; UINT_MAX); \</span></div>

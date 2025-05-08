@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('m-prioqueue_8h_source.html',''); initR
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * M*LIB - dynamic priority queue module</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2024, Patrick Pelissier</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2025, Patrick Pelissier</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * All rights reserved.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
@@ -242,7 +242,7 @@ $(document).ready(function(){initNavTree('m-prioqueue_8h_source.html',''); initR
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#define M_PR1OQUEUE_DEF_P3(name, type, oplist, prioqueue_t, it_t)             \</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">  </span><span class="comment">/* Definition of the internal array used to construct the priority queue */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">  ARRAY_DEF(M_F(name, _array), type, oplist)                                  \</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">  M_ARRAY_DEF(M_F(name, _array), type, oplist)                                \</span></div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">  M_PR1OQUEUE_DEF_TYPE(name, type, oplist, prioqueue_t, it_t)                 \</span></div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">  M_CHECK_COMPATIBLE_OPLIST(name, 1, type, oplist)                            \</span></div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">  M_PR1OQUEUE_DEF_CORE(name, type, oplist, prioqueue_t, it_t)                 \</span></div>
@@ -587,7 +587,7 @@ $(document).ready(function(){initNavTree('m-prioqueue_8h_source.html',''); initR
 <div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span><span class="preprocessor">                                                                              \</span></div>
 <div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span><span class="preprocessor">  M_IF_METHOD(GET_STR, oplist)(                                               \</span></div>
 <div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span><span class="preprocessor">  M_INLINE void                                                               \</span></div>
-<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span><span class="preprocessor">  M_F(name, _get_str)(string_t str, const prioqueue_t p, bool append)         \</span></div>
+<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span><span class="preprocessor">  M_F(name, _get_str)(m_string_t str, const prioqueue_t p, bool append)       \</span></div>
 <div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span><span class="preprocessor">  {                                                                           \</span></div>
 <div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span><span class="preprocessor">    M_F(name, _array_get_str)(str, p-&gt;array, append);                         \</span></div>
 <div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span><span class="preprocessor">  }                                                                           \</span></div>

@@ -2,6 +2,7 @@ var annotated_dup =
 [
     [ "bigdata_s", "structbigdata__s.html", null ],
     [ "data_node", "structdata__node.html", null ],
+    [ "data_s", "structdata__s.html", null ],
     [ "data_t", "structdata__t.html", null ],
     [ "fib2_s", "structfib2__s.html", null ],
     [ "ishared_s", "structishared__s.html", null ],
@@ -9,6 +10,7 @@ var annotated_dup =
     [ "lib_ext_struct", "structlib__ext__struct.html", null ],
     [ "m_bitset_it_s", "structm__bitset__it__s.html", null ],
     [ "m_bitset_s", "structm__bitset__s.html", null ],
+    [ "m_bstring_s", "structm__bstring__s.html", null ],
     [ "m_buff3r_number_s", "unionm__buff3r__number__s.html", null ],
     [ "m_cmemp00l_list_s", "structm__cmemp00l__list__s.html", null ],
     [ "m_core_backoff_s", "structm__core__backoff__s.html", null ],
@@ -26,7 +28,6 @@ var annotated_dup =
     [ "m_serial_write_s", "structm__serial__write__s.html", null ],
     [ "m_snapsh0t_mrsw_s", "structm__snapsh0t__mrsw__s.html", null ],
     [ "m_str1ng_heap_s", "structm__str1ng__heap__s.html", null ],
-    [ "m_str1ng_stack_s", "structm__str1ng__stack__s.html", null ],
     [ "m_str1ng_union_u", "unionm__str1ng__union__u.html", null ],
     [ "m_string_it_s", "structm__string__it__s.html", null ],
     [ "m_string_s", "structm__string__s.html", null ],

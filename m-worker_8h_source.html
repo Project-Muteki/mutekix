@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('m-worker_8h_source.html',''); initResi
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * M*LIB / WORKER - Extra worker interface</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2024, Patrick Pelissier</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2025, Patrick Pelissier</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * All rights reserved.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
@@ -253,8 +253,8 @@ $(document).ready(function(){initNavTree('m-worker_8h_source.html',''); initResi
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>} m_work3r_thread_ct;</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">/* Definition of the queue that will record the work orders */</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>BUFFER_DEF(m_work3r_queue, m_work3r_order_ct, 0,</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>           BUFFER_QUEUE|BUFFER_UNBLOCKING_PUSH|BUFFER_BLOCKING_POP|BUFFER_THREAD_SAFE|BUFFER_DEFERRED_POP, M_WORK3R_OPLIST)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>M_BUFFER_DEF(m_work3r_queue, m_work3r_order_ct, 0,</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>           M_BUFFER_QUEUE|M_BUFFER_UNBLOCKING_PUSH|M_BUFFER_BLOCKING_POP|M_BUFFER_THREAD_SAFE|M_BUFFER_DEFERRED_POP, M_WORK3R_OPLIST)</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">/* Definition the global pool of workers */</span></div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structm__worker__s.html">m_worker_s</a> {</div>

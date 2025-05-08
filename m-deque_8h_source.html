@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('m-deque_8h_source.html',''); initResiz
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * M*LIB - DEQUE module</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2024, Patrick Pelissier</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2017-2025, Patrick Pelissier</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * All rights reserved.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
@@ -226,7 +226,7 @@ $(document).ready(function(){initNavTree('m-deque_8h_source.html',''); initResiz
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#define M_D3QU3_DEF_TYPE(name, type, oplist, deque_t, it_t, node_t)           \</span></div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">                                                                              \</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">  typedef struct M_F(name, _node_s) {                                         \</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">    ILIST_INTERFACE(M_F(name, _node_list), struct M_F(name, _node_s));        \</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">    M_ILIST_INTERFACE(M_F(name, _node_list), struct M_F(name, _node_s));      \</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">    size_t size;                                                              \</span></div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">    type  data[M_MIN_FLEX_ARRAY_SIZE];                                        \</span></div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">  } node_t;                                                                   \</span></div>
@@ -238,7 +238,7 @@ $(document).ready(function(){initNavTree('m-deque_8h_source.html',''); initResiz
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">     The interfaces are compatible.                                           \</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">  */</span><span class="preprocessor">                                                                          \</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">  </span><span class="comment">/* FIXME: How can I separate public types and private implementation? */</span><span class="preprocessor">    \</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">  ILIST_DEF(M_F(name, _node_list), node_t, (DEL(M_GET_FREE oplist)) )         \</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">  M_ILIST_DEF(M_F(name, _node_list), node_t, (DEL(M_GET_FREE oplist)) )       \</span></div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">                                                                              \</span></div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">  </span><span class="comment">/* Define an internal iterator */</span><span class="preprocessor">                                           \</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">  typedef struct M_F(name, _it2_s) {                                          \</span></div>
@@ -1216,7 +1216,7 @@ $(document).ready(function(){initNavTree('m-deque_8h_source.html',''); initResiz
 <div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span><span class="preprocessor">   ,RESET(M_F(name,_reset))                                                   \</span></div>
 <div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span><span class="preprocessor">   ,GET_SIZE(M_F(name, _size))                                                \</span></div>
 <div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span><span class="preprocessor">   ,PUSH(M_F(name,_push_back))                                                \</span></div>
-<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span><span class="preprocessor">   ,POP(M_F(name,_pop_back))                                                  \</span></div>
+<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span><span class="preprocessor">   ,POP(M_F(name,_pop_front))                                                 \</span></div>
 <div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span><span class="preprocessor">   ,OPLIST(oplist)                                                            \</span></div>
 <div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span><span class="preprocessor">   ,M_IF_METHOD(GET_STR, oplist)(GET_STR(M_F(name, _get_str)),)               \</span></div>
 <div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span><span class="preprocessor">   ,M_IF_METHOD(PARSE_STR, oplist)(PARSE_STR(M_F(name, _parse_str)),)         \</span></div>

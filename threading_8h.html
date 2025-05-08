@@ -135,15 +135,15 @@ Functions</h2></td></tr>
 <tr class="memitem:aae466dd0b3b0b95c91a67c8fe276d5d3" id="r_aae466dd0b3b0b95c91a67c8fe276d5d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#aae466dd0b3b0b95c91a67c8fe276d5d3">mutekix_thread_wrapper</a> (void *arg)</td></tr>
 <tr class="memdesc:aae466dd0b3b0b95c91a67c8fe276d5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap the thread function for ABI and THUMB compatibility.  <br /></td></tr>
 <tr class="separator:aae466dd0b3b0b95c91a67c8fe276d5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7883cb7d34e486718c9c8051ee98ba1c" id="r_a7883cb7d34e486718c9c8051ee98ba1c"><td class="memItemLeft" align="right" valign="top">thread_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a7883cb7d34e486718c9c8051ee98ba1c">mutekix_thread_get_current</a> ()</td></tr>
-<tr class="memdesc:a7883cb7d34e486718c9c8051ee98ba1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get descriptor of current running thread.  <br /></td></tr>
-<tr class="separator:a7883cb7d34e486718c9c8051ee98ba1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a8bfae10ab88f9dab198888a18bdb5" id="r_ac0a8bfae10ab88f9dab198888a18bdb5"><td class="memItemLeft" align="right" valign="top">thread_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#ac0a8bfae10ab88f9dab198888a18bdb5">mutekix_thread_get_current</a> (void)</td></tr>
+<tr class="memdesc:ac0a8bfae10ab88f9dab198888a18bdb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get descriptor of current running thread.  <br /></td></tr>
+<tr class="separator:ac0a8bfae10ab88f9dab198888a18bdb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff00505d4c5741e9a2a92dd1d5c327da" id="r_aff00505d4c5741e9a2a92dd1d5c327da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#aff00505d4c5741e9a2a92dd1d5c327da">mutekix_tls_init</a> (thread_t *thr)</td></tr>
 <tr class="memdesc:aff00505d4c5741e9a2a92dd1d5c327da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Thread Local Storage (TLS) for a thread.  <br /></td></tr>
 <tr class="separator:aff00505d4c5741e9a2a92dd1d5c327da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b4adfc29f5a9b2f74426fc46bcc06ca" id="r_a7b4adfc29f5a9b2f74426fc46bcc06ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a7b4adfc29f5a9b2f74426fc46bcc06ca">mutekix_tls_init_self</a> ()</td></tr>
-<tr class="memdesc:a7b4adfc29f5a9b2f74426fc46bcc06ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Thread Local Storage (TLS) for current thread.  <br /></td></tr>
-<tr class="separator:a7b4adfc29f5a9b2f74426fc46bcc06ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d204658fdc0d7031924470ae522395" id="r_a62d204658fdc0d7031924470ae522395"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a62d204658fdc0d7031924470ae522395">mutekix_tls_init_self</a> (void)</td></tr>
+<tr class="memdesc:a62d204658fdc0d7031924470ae522395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Thread Local Storage (TLS) for current thread.  <br /></td></tr>
+<tr class="separator:a62d204658fdc0d7031924470ae522395"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d39828a1f0dbc9e9468f1b24147b38c" id="r_a7d39828a1f0dbc9e9468f1b24147b38c"><td class="memItemLeft" align="right" valign="top">void **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a7d39828a1f0dbc9e9468f1b24147b38c">mutekix_tls_get</a> (thread_t *thr, unsigned int key)</td></tr>
 <tr class="memdesc:a7d39828a1f0dbc9e9468f1b24147b38c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a value in the TLS block of a specific thread using a key.  <br /></td></tr>
 <tr class="separator:a7d39828a1f0dbc9e9468f1b24147b38c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,8 +179,8 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Threading helpers. </p>
 <p>Contains low-level TLS helper routines and wrappers for creating new Besta RTOS threads that work well with EABI and TLS. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a7883cb7d34e486718c9c8051ee98ba1c" name="a7883cb7d34e486718c9c8051ee98ba1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7883cb7d34e486718c9c8051ee98ba1c">&#9670;&#160;</a></span>mutekix_thread_get_current()</h2>
+<a id="ac0a8bfae10ab88f9dab198888a18bdb5" name="ac0a8bfae10ab88f9dab198888a18bdb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a8bfae10ab88f9dab198888a18bdb5">&#9670;&#160;</a></span>mutekix_thread_get_current()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,6 +191,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">thread_t * mutekix_thread_get_current </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -626,8 +627,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b4adfc29f5a9b2f74426fc46bcc06ca" name="a7b4adfc29f5a9b2f74426fc46bcc06ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b4adfc29f5a9b2f74426fc46bcc06ca">&#9670;&#160;</a></span>mutekix_tls_init_self()</h2>
+<a id="a62d204658fdc0d7031924470ae522395" name="a62d204658fdc0d7031924470ae522395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62d204658fdc0d7031924470ae522395">&#9670;&#160;</a></span>mutekix_tls_init_self()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -638,6 +639,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int mutekix_tls_init_self </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
