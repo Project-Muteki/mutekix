@@ -6,7 +6,7 @@
 
 #ifdef MUTEKIX_PROVIDE_TLS
 
-thread_t *mutekix_thread_get_current() {
+thread_t *mutekix_thread_get_current(void) {
     critical_section_t cs;
 
 #ifdef MUTEKIX_USE_ONLY_PUBLIC_INTERFACES
@@ -92,7 +92,7 @@ int mutekix_tls_free(thread_t *thr, unsigned int key) {
     return 0;
 }
 
-int mutekix_tls_init_self() {
+int mutekix_tls_init_self(void) {
     thread_t *thr = mutekix_thread_get_current();
     if (thr == NULL) {
         return -1;
@@ -147,7 +147,7 @@ extern char __tdata_end;
 extern char __tbss_start;
 extern char __tbss_end;
 
-void *__aeabi_read_tp_real() {
+void *__aeabi_read_tp_real(void) {
     thread_t *thr = mutekix_thread_get_current();
     if (thr == NULL) {
         return NULL;
@@ -178,7 +178,7 @@ void *__aeabi_read_tp_real() {
 }
 
 __attribute__((naked))
-void __aeabi_read_tp() {
+void __aeabi_read_tp(void) {
     // Save registers that are normally scratch registers except r0 to satisfy the no clobber requirements
     asm volatile (
         "push {r1, r2, r3, r4, ip, lr}\n\t"

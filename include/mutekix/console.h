@@ -63,14 +63,14 @@ extern void mutekix_console_init(const mutekix_console_palette_t *palette);
  * @x_void_param
  * @x_void_return
  */
-extern void mutekix_console_fini();
+extern void mutekix_console_fini(void);
 
 /**
  * @brief Clear all text and reset cursor back to the upper left corner of the screen.
  * @x_void_param
  * @x_void_return
  */
-extern void mutekix_console_clear();
+extern void mutekix_console_clear(void);
 
 /**
  * @brief Write buffer to the console.
@@ -100,7 +100,7 @@ extern int mutekix_console_printf(const char *fmt, ...);
  * @x_void_param
  * @return Character code, or `-1` if there's an error.
  */
-extern int mutekix_console_getchar();
+extern int mutekix_console_getchar(void);
 
 #ifdef __cplusplus
 } // extern "C"

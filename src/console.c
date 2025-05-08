@@ -181,7 +181,7 @@ int mutekix_console_printf(const char *fmt, ...) {
     return ret;
 }
 
-int mutekix_console_getchar() {
+int mutekix_console_getchar(void) {
     static ui_event_t uievent = {0};
     static unsigned int flags;
     register bool is_shift = false, is_symbol=false;
@@ -341,7 +341,7 @@ int mutekix_console_getchar() {
     //return EOF;
 }
 
-void mutekix_console_clear() {
+void mutekix_console_clear(void) {
     OSEnterCriticalSection(&(fbcon_config.mutex));
     ClearScreen(false);
     fbcon_config.pos_x = 0;
@@ -395,7 +395,7 @@ void mutekix_console_init(const mutekix_console_palette_t *palette) {
  *
  * Sets the internal enable flag back to false so no more messages will be printed.
  */
-void mutekix_console_fini() {
+void mutekix_console_fini(void) {
     OSEnterCriticalSection(&(fbcon_config.mutex));
     fbcon_config.ready = false;
     OSLeaveCriticalSection(&(fbcon_config.mutex));

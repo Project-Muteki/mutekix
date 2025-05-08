@@ -13,7 +13,6 @@
 #define __MUTEKIX_TIME_H__
 
 #include <stdbool.h>
-#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -25,7 +24,7 @@ extern "C" {
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-bool mutekix_time_init();
+bool mutekix_time_init(void);
 
 /**
  * @brief Deinitialize component.
@@ -33,26 +32,26 @@ bool mutekix_time_init();
  * @x_void_param
  * @x_void_return
  */
-void mutekix_time_fini();
+void mutekix_time_fini(void);
 
 /**
  * @brief Get microseconds.
  * @return Microseconds elapsed since mutekix_time_init() was called.
  */
-unsigned long long mutekix_time_get_usecs();
+unsigned long long mutekix_time_get_usecs(void);
 
 /**
  * @brief Get ticks.
  * @details Resolution of each tick may differ across devices.
  * @return Ticks elapsed since mutekix_time_init() was called.
  */
-unsigned long long mutekix_time_get_ticks();
+unsigned long long mutekix_time_get_ticks(void);
 
 /**
  * @brief Get quantum (microseconds elapsed of each tick).
  * @return Microsecond of each tick.
  */
-unsigned int mutekix_time_get_quantum();
+unsigned int mutekix_time_get_quantum(void);
 
 #ifdef __cplusplus
 } // extern "C"

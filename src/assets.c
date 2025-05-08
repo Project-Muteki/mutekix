@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <wchar.h>
+#include <inttypes.h>
 
 #include <muteki/fs.h>
 
@@ -153,7 +154,7 @@ static bool mutekix_assets_create_index(mutekix_assets_index_dict_t index_root, 
                 break;
             }
             default: {
-                WriteComDebugMsg("mutekix_assets_create_index: Unknown PKZIP header 0x%08lx\n", magic);
+                WriteComDebugMsg("mutekix_assets_create_index: Unknown PKZIP header 0x%08" PRIx32 "\n", magic);
                 abort_parsing = true;
             }
         }
@@ -168,7 +169,7 @@ static bool mutekix_assets_create_index(mutekix_assets_index_dict_t index_root, 
     return result;
 }
 
-loader_file_descriptor_t *mutekix_assets_get_root() {
+loader_file_descriptor_t *mutekix_assets_get_root(void) {
     loader_loaded_t *loaded = GetApplicationProcW(GetCurrentPathW());
     loader_file_descriptor_t *root = NULL;
 

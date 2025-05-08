@@ -50,7 +50,7 @@ static int _scheduler_tick_hook_double_rtc(void *user_data) {
     return 0;
 }
 
-static preferred_timer_type_t _detect_timer_type() {
+static preferred_timer_type_t _detect_timer_type(void) {
     datetime_t dt = {0};
     int delta_ms_total = 0;
     for (int i = 0; i < 10; i++) {
@@ -94,7 +94,7 @@ static time_t convert_date(const datetime_t *dt) {
     return mktime(&curr);
 }
 
-bool mutekix_time_init() {
+bool mutekix_time_init(void) {
     mutekix_time_fini();
 
     accumulator = 0;
@@ -134,7 +134,7 @@ bool mutekix_time_init() {
     return false;
 }
 
-void mutekix_time_fini() {
+void mutekix_time_fini(void) {
     if (timer_thread != NULL) {
         OSTerminateThread(timer_thread, 0);
         timer_thread = NULL;
@@ -148,11 +148,11 @@ void mutekix_time_fini() {
     }
 }
 
-unsigned long long mutekix_time_get_usecs() {
+unsigned long long mutekix_time_get_usecs(void) {
     return mutekix_time_get_ticks() * mutekix_time_get_quantum();
 }
 
-unsigned long long mutekix_time_get_ticks() {
+unsigned long long mutekix_time_get_ticks(void) {
     switch (timer_type) {
         case TIMER_TYPE_SCHED: {
             if (scheduler_tick_timer < (accumulator & 0xffffffff)) {
@@ -204,7 +204,7 @@ unsigned long long mutekix_time_get_ticks() {
     return accumulator;
 }
 
-unsigned int mutekix_time_get_quantum() {
+unsigned int mutekix_time_get_quantum(void) {
     switch (timer_type) {
         case TIMER_TYPE_SCHED:
         case TIMER_TYPE_RTC:

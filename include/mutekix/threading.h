@@ -38,7 +38,7 @@ extern int mutekix_thread_wrapper(void *arg);
  * @x_void_param
  * @return The descriptor of current running thread.
  */
-extern thread_t *mutekix_thread_get_current();
+extern thread_t *mutekix_thread_get_current(void);
 
 /** @brief Max TLS key allowed. */
 static const unsigned int MUTEKIX_TLS_KEY_MAX = sizeof(((thread_t *) NULL)->unk_0x34) - 1;
@@ -65,7 +65,7 @@ extern int mutekix_tls_init(thread_t *thr);
  *
  * @return 0 if successful.
  */
-extern int mutekix_tls_init_self();
+extern int mutekix_tls_init_self(void);
 
 /**
  * @brief Get a value in the TLS block of a specific thread using a key.

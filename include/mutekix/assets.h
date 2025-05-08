@@ -50,7 +50,7 @@ typedef struct {
  * @details The descriptor needs to be closed manually with _CloseFile() after use.
  * @return The loader file descriptor of the asset bundle.
  */
-loader_file_descriptor_t *mutekix_assets_get_root();
+loader_file_descriptor_t *mutekix_assets_get_root(void);
 
 /**
  * @brief Load asset bundle.
