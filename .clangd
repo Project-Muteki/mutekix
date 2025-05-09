@@ -2,3 +2,4 @@ CompileFlags:
     Add:
         - '-fshort-wchar'
     CompilationDatabase: './builddir'
+    BuiltinHeaders: QueryDriver

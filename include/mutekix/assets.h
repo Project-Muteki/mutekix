@@ -48,6 +48,7 @@ typedef struct {
 /**
  * @brief Create the loader file descriptor instance of the asset bundle of the current applet.
  * @details The descriptor needs to be closed manually with _CloseFile() after use.
+ * @x_void_param
  * @return The loader file descriptor of the asset bundle.
  */
 loader_file_descriptor_t *mutekix_assets_get_root(void);
@@ -61,8 +62,19 @@ loader_file_descriptor_t *mutekix_assets_get_root(void);
  */
 bool mutekix_assets_init_applet(mutekix_assets_t *ctx);
 
+/**
+ * @brief Close asset bundle.
+ * @param ctx Context object.
+ * @x_void_return
+ */
 void mutekix_assets_fini(mutekix_assets_t *ctx);
 
+/**
+ * @brief Open an asset file in the bundle by path.
+ * @param ctx Context object.
+ * @param path Path to the asset file.
+ * @return Loader file discriptor of the asset file.
+ */
 loader_file_descriptor_t *mutekix_assets_open(mutekix_assets_t *ctx, const char *path);
 
 #ifdef __cplusplus
