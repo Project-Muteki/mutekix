@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"index.html#autotoc_md798":[0,10,21,2],
+"index.html#autotoc_md799":[0,10,21,2,0],
 "index.html#autotoc_md8":[0,0],
 "index.html#autotoc_md800":[0,10,21,2,1],
 "index.html#autotoc_md801":[0,10,21,2,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md7":[1,7],
 "pages.html":[],
 "structSoundIo.html":[2,0,46],
-"structSoundIoDevice.html":[2,0,47],
-"structSoundIoOutStream.html":[2,0,48],
-"structbigdata__s.html":[2,0,0]
+"structSoundIoDevice.html":[2,0,47]
 };

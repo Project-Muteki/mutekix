@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"structSoundIoOutStream.html":[2,0,48],
+"structbigdata__s.html":[2,0,0],
 "structdata__node.html":[2,0,1],
 "structdata__s.html":[2,0,2],
 "structdata__t.html":[2,0,3],

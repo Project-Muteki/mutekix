@@ -141,11 +141,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a7e183fd3d34a47fde640ef950b7c95a3" id="r_a7e183fd3d34a47fde640ef950b7c95a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#a7e183fd3d34a47fde640ef950b7c95a3">mutekix_assets_init_applet</a> (<a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *ctx)</td></tr>
 <tr class="memdesc:a7e183fd3d34a47fde640ef950b7c95a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load asset bundle.  <br /></td></tr>
 <tr class="separator:a7e183fd3d34a47fde640ef950b7c95a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc0a45860fb537e9969fb4c3b6fa77e8" id="r_abc0a45860fb537e9969fb4c3b6fa77e8"><td class="memItemLeft" align="right" valign="top"><a id="abc0a45860fb537e9969fb4c3b6fa77e8" name="abc0a45860fb537e9969fb4c3b6fa77e8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>mutekix_assets_fini</b> (<a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *ctx)</td></tr>
+<tr class="memitem:abc0a45860fb537e9969fb4c3b6fa77e8" id="r_abc0a45860fb537e9969fb4c3b6fa77e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#abc0a45860fb537e9969fb4c3b6fa77e8">mutekix_assets_fini</a> (<a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *ctx)</td></tr>
+<tr class="memdesc:abc0a45860fb537e9969fb4c3b6fa77e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close asset bundle.  <br /></td></tr>
 <tr class="separator:abc0a45860fb537e9969fb4c3b6fa77e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b1e38df41939610831b7d93444e7d98" id="r_a5b1e38df41939610831b7d93444e7d98"><td class="memItemLeft" align="right" valign="top"><a id="a5b1e38df41939610831b7d93444e7d98" name="a5b1e38df41939610831b7d93444e7d98"></a>
-loader_file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><b>mutekix_assets_open</b> (<a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *ctx, const char *path)</td></tr>
+<tr class="memitem:a5b1e38df41939610831b7d93444e7d98" id="r_a5b1e38df41939610831b7d93444e7d98"><td class="memItemLeft" align="right" valign="top">loader_file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#a5b1e38df41939610831b7d93444e7d98">mutekix_assets_open</a> (<a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *ctx, const char *path)</td></tr>
+<tr class="memdesc:a5b1e38df41939610831b7d93444e7d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open an asset file in the bundle by path.  <br /></td></tr>
 <tr class="separator:a5b1e38df41939610831b7d93444e7d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -155,6 +155,34 @@ loader_file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><b
 <div class="line"># Optionally add it to the exe file</div>
 <div class="line">cat applet.exe applet.dat &gt; applet-with-asset.exe</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="abc0a45860fb537e9969fb4c3b6fa77e8" name="abc0a45860fb537e9969fb4c3b6fa77e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc0a45860fb537e9969fb4c3b6fa77e8">&#9670;&#160;</a></span>mutekix_assets_fini()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mutekix_assets_fini </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close asset bundle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>Context object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
 <a id="a9c02241b9e54580739ed1a772232eab6" name="a9c02241b9e54580739ed1a772232eab6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c02241b9e54580739ed1a772232eab6">&#9670;&#160;</a></span>mutekix_assets_get_root()</h2>
 
@@ -172,7 +200,9 @@ loader_file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><b
 </div><div class="memdoc">
 
 <p>Create the loader file descriptor instance of the asset bundle of the current applet. </p>
-<p>The descriptor needs to be closed manually with _CloseFile() after use. </p><dl class="section return"><dt>Returns</dt><dd>The loader file descriptor of the asset bundle. </dd></dl>
+<p>The descriptor needs to be closed manually with _CloseFile() after use.</p>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ </p><dl class="section return"><dt>Returns</dt><dd>The loader file descriptor of the asset bundle. </dd></dl>
 
 </div>
 </div>
@@ -206,6 +236,44 @@ loader_file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><b
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a5b1e38df41939610831b7d93444e7d98" name="a5b1e38df41939610831b7d93444e7d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1e38df41939610831b7d93444e7d98">&#9670;&#160;</a></span>mutekix_assets_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">loader_file_descriptor_t * mutekix_assets_open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open an asset file in the bundle by path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>Context object. </td></tr>
+    <tr><td class="paramname">path</td><td>Path to the asset file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Loader file discriptor of the asset file. </dd></dl>
 
 </div>
 </div>
