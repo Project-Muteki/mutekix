@@ -129,9 +129,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9c02241b9e54580739ed1a772232eab6" id="r_a9c02241b9e54580739ed1a772232eab6"><td class="memItemLeft" align="right" valign="top">loader_file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#a9c02241b9e54580739ed1a772232eab6">mutekix_assets_get_root</a> (void)</td></tr>
 <tr class="memdesc:a9c02241b9e54580739ed1a772232eab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the loader file descriptor instance of the asset bundle of the current applet.  <br /></td></tr>
 <tr class="separator:a9c02241b9e54580739ed1a772232eab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e183fd3d34a47fde640ef950b7c95a3" id="r_a7e183fd3d34a47fde640ef950b7c95a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#a7e183fd3d34a47fde640ef950b7c95a3">mutekix_assets_init_applet</a> (<a class="el" href="assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a">mutekix_assets_t</a> *ctx)</td></tr>
-<tr class="memdesc:a7e183fd3d34a47fde640ef950b7c95a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load asset bundle.  <br /></td></tr>
-<tr class="separator:a7e183fd3d34a47fde640ef950b7c95a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7445c5bbdd670789ca4e65720ba27a" id="r_adc7445c5bbdd670789ca4e65720ba27a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a">mutekix_assets_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#adc7445c5bbdd670789ca4e65720ba27a">mutekix_assets_init</a> (void)</td></tr>
+<tr class="memdesc:adc7445c5bbdd670789ca4e65720ba27a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load asset bundle.  <br /></td></tr>
+<tr class="separator:adc7445c5bbdd670789ca4e65720ba27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc0a45860fb537e9969fb4c3b6fa77e8" id="r_abc0a45860fb537e9969fb4c3b6fa77e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#abc0a45860fb537e9969fb4c3b6fa77e8">mutekix_assets_fini</a> (<a class="el" href="assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a">mutekix_assets_t</a> *ctx)</td></tr>
 <tr class="memdesc:abc0a45860fb537e9969fb4c3b6fa77e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close asset bundle.  <br /></td></tr>
 <tr class="separator:abc0a45860fb537e9969fb4c3b6fa77e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,36 +197,24 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7e183fd3d34a47fde640ef950b7c95a3" name="a7e183fd3d34a47fde640ef950b7c95a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e183fd3d34a47fde640ef950b7c95a3">&#9670;&#160;</a></span>mutekix_assets_init_applet()</h2>
+<a id="adc7445c5bbdd670789ca4e65720ba27a" name="adc7445c5bbdd670789ca4e65720ba27a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7445c5bbdd670789ca4e65720ba27a">&#9670;&#160;</a></span>mutekix_assets_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool mutekix_assets_init_applet </td>
+          <td class="memname"><a class="el" href="assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a">mutekix_assets_t</a> * mutekix_assets_init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a">mutekix_assets_t</a> *&#160;</td>
-          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Load asset bundle. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ctx</td><td>Context object. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>The operation was completed successfully.  </td></tr>
-    <tr><td class="paramname">false</td><td>The operation failed with error.  </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>The allocated context object. </dd></dl>
 
 </div>
 </div>
