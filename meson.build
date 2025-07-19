@@ -2,7 +2,7 @@ project('mutekix', 'c',
     version : '1.0.0',
     default_options : ['warning_level=3'])
 
-includes = include_directories(['include/'])
+includes = include_directories(['include/', 'ext/mlib/'])
 sources = [
     'src/assets.c',
     'src/console.c',
@@ -11,19 +11,27 @@ sources = [
     'src/thread_wrapper_armv4T.s',
 ]
 
+headers_mlibjson = [
+    'ext/mjsonlib/mjsonlib.h',
+]
+
+sources_mlibjson = [
+    'ext/mjsonlib/mjsonlib.c',
+]
+
 mlib_sample_dirs = [
-    'mutekix/mlib/doc',
-    'mutekix/mlib/example',
-    'mutekix/mlib/tests',
-    'mutekix/mlib/.github',
+    'doc',
+    'example',
+    'tests',
+    '.github',
 ]
 
 mlib_misc_files = [
-    'mutekix/mlib/Makefile',
-    'mutekix/mlib/LICENSE',
-    'mutekix/mlib/.gitignore',
-    'mutekix/mlib/.git',
-    'mutekix/mlib/README.md',
+    'Makefile',
+    'LICENSE',
+    '.gitignore',
+    '.git',
+    'README.md',
 ]
 
 c_args = []
@@ -38,7 +46,7 @@ endif
 
 static_library(
     'mutekix',
-    sources,
+    [sources, sources_mlibjson],
     include_directories : includes,
     install : true,
     c_args : c_args,
@@ -48,7 +56,21 @@ static_library(
 install_subdir(
     'include/',
     install_dir : 'include/',
-    exclude_directories: mlib_sample_dirs,
-    exclude_files: mlib_misc_files,
+    exclude_directories : mlib_sample_dirs,
+    exclude_files : mlib_misc_files,
     strip_directory : true,
+)
+
+install_subdir(
+    'ext/mlib/',
+    install_dir : 'include/mutekix/mlib/',
+    exclude_directories : mlib_sample_dirs,
+    exclude_files : mlib_misc_files,
+    strip_directory : true,
+)
+
+install_headers(
+    headers_mlibjson,
+    install_dir : 'include/mutekix/mlibjson/',
+    preserve_path : false,
 )

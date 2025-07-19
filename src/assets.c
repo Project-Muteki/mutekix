@@ -8,6 +8,21 @@
 
 #include <muteki/fs.h>
 
+#include "m-dict.h"
+#include "m-string.h"
+
+typedef struct mutekix_assets_index_entry_s {
+    size_t offset;
+    size_t size;
+} mutekix_assets_index_dict_entry_t;
+
+DICT_DEF2(mutekix_assets_index_dict, string_t, M_STRING_OPLIST, mutekix_assets_index_dict_entry_t, M_POD_OPLIST)
+
+struct mutekix_assets_s {
+    loader_file_descriptor_t *root;
+    mutekix_assets_index_dict_t index;
+};
+
 // Brief overview of the PKZIP format: https://users.cs.jmu.edu/buchhofp/forensics/formats/pkzip.html
 // Official PKZIP format specification: https://pkwaredownloads.blob.core.windows.net/pem/APPNOTE.txt
 

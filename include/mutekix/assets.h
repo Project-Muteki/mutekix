@@ -26,24 +26,14 @@
 #include <muteki/loader.h>
 #include <muteki/utils.h>
 
-#include "mutekix/mlib/m-dict.h"
-#include "mutekix/mlib/m-string.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct mutekix_assets_index_entry_s {
-    size_t offset;
-    size_t size;
-} mutekix_assets_index_dict_entry_t;
-
-DICT_DEF2(mutekix_assets_index_dict, string_t, M_STRING_OPLIST, mutekix_assets_index_dict_entry_t, M_POD_OPLIST)
-
-typedef struct {
-    loader_file_descriptor_t *root;
-    mutekix_assets_index_dict_t index;
-} mutekix_assets_t;
+/**
+ * @brief Opaque assets reader context.
+ */
+typedef struct mutekix_assets_s mutekix_assets_t;
 
 /**
  * @brief Create the loader file descriptor instance of the asset bundle of the current applet.

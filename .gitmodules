@@ -4,3 +4,6 @@
 [submodule "ext/mlib"]
 	path = ext/mlib
 	url = https://github.com/P-p-H-d/mlib.git
+[submodule "ext/mjsonlib"]
+	path = ext/mjsonlib
+	url = https://github.com/P-p-H-d/mjsonlib.git
