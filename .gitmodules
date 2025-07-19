@@ -2,5 +2,5 @@
 	path = ext/doxygen-awesome-css
 	url = https://github.com/jothepro/doxygen-awesome-css.git
 [submodule "ext/mlib"]
-	path = include/mutekix/mlib
+	path = ext/mlib
 	url = https://github.com/P-p-H-d/mlib.git
