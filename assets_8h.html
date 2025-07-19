@@ -102,7 +102,6 @@ $(document).ready(function(){initNavTree('assets_8h.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">assets.h File Reference</div></div>
@@ -115,36 +114,28 @@ $(document).ready(function(){initNavTree('assets_8h.html',''); initResizable(); 
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;muteki/loader.h&gt;</code><br />
 <code>#include &lt;muteki/utils.h&gt;</code><br />
-<code>#include &quot;mutekix/mlib/m-dict.h&quot;</code><br />
-<code>#include &quot;mutekix/mlib/m-string.h&quot;</code><br />
 </div>
 <p><a href="assets_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmutekix__assets__index__entry__s.html">mutekix_assets_index_entry_s</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:af2da3996b316d9084cfbde640fc0467f" id="r_af2da3996b316d9084cfbde640fc0467f"><td class="memItemLeft" align="right" valign="top"><a id="af2da3996b316d9084cfbde640fc0467f" name="af2da3996b316d9084cfbde640fc0467f"></a>
-typedef struct <a class="el" href="structmutekix__assets__index__entry__s.html">mutekix_assets_index_entry_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mutekix_assets_index_dict_entry_t</b></td></tr>
-<tr class="separator:af2da3996b316d9084cfbde640fc0467f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf2c4ae12e756eb1456c2ed20b50f7a" id="r_aebf2c4ae12e756eb1456c2ed20b50f7a"><td class="memItemLeft" align="right" valign="top"><a id="aebf2c4ae12e756eb1456c2ed20b50f7a" name="aebf2c4ae12e756eb1456c2ed20b50f7a"></a>
+typedef struct mutekix_assets_s&#160;</td><td class="memItemRight" valign="bottom"><b>mutekix_assets_t</b></td></tr>
+<tr class="memdesc:aebf2c4ae12e756eb1456c2ed20b50f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque assets reader context. <br /></td></tr>
+<tr class="separator:aebf2c4ae12e756eb1456c2ed20b50f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a9c02241b9e54580739ed1a772232eab6" id="r_a9c02241b9e54580739ed1a772232eab6"><td class="memItemLeft" align="right" valign="top">loader_file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#a9c02241b9e54580739ed1a772232eab6">mutekix_assets_get_root</a> (void)</td></tr>
 <tr class="memdesc:a9c02241b9e54580739ed1a772232eab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the loader file descriptor instance of the asset bundle of the current applet.  <br /></td></tr>
 <tr class="separator:a9c02241b9e54580739ed1a772232eab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e183fd3d34a47fde640ef950b7c95a3" id="r_a7e183fd3d34a47fde640ef950b7c95a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#a7e183fd3d34a47fde640ef950b7c95a3">mutekix_assets_init_applet</a> (<a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *ctx)</td></tr>
+<tr class="memitem:a7e183fd3d34a47fde640ef950b7c95a3" id="r_a7e183fd3d34a47fde640ef950b7c95a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#a7e183fd3d34a47fde640ef950b7c95a3">mutekix_assets_init_applet</a> (<a class="el" href="assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a">mutekix_assets_t</a> *ctx)</td></tr>
 <tr class="memdesc:a7e183fd3d34a47fde640ef950b7c95a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load asset bundle.  <br /></td></tr>
 <tr class="separator:a7e183fd3d34a47fde640ef950b7c95a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc0a45860fb537e9969fb4c3b6fa77e8" id="r_abc0a45860fb537e9969fb4c3b6fa77e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#abc0a45860fb537e9969fb4c3b6fa77e8">mutekix_assets_fini</a> (<a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *ctx)</td></tr>
+<tr class="memitem:abc0a45860fb537e9969fb4c3b6fa77e8" id="r_abc0a45860fb537e9969fb4c3b6fa77e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#abc0a45860fb537e9969fb4c3b6fa77e8">mutekix_assets_fini</a> (<a class="el" href="assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a">mutekix_assets_t</a> *ctx)</td></tr>
 <tr class="memdesc:abc0a45860fb537e9969fb4c3b6fa77e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close asset bundle.  <br /></td></tr>
 <tr class="separator:abc0a45860fb537e9969fb4c3b6fa77e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b1e38df41939610831b7d93444e7d98" id="r_a5b1e38df41939610831b7d93444e7d98"><td class="memItemLeft" align="right" valign="top">loader_file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#a5b1e38df41939610831b7d93444e7d98">mutekix_assets_open</a> (<a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *ctx, const char *path)</td></tr>
+<tr class="memitem:a5b1e38df41939610831b7d93444e7d98" id="r_a5b1e38df41939610831b7d93444e7d98"><td class="memItemLeft" align="right" valign="top">loader_file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assets_8h.html#a5b1e38df41939610831b7d93444e7d98">mutekix_assets_open</a> (<a class="el" href="assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a">mutekix_assets_t</a> *ctx, const char *path)</td></tr>
 <tr class="memdesc:a5b1e38df41939610831b7d93444e7d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open an asset file in the bundle by path.  <br /></td></tr>
 <tr class="separator:a5b1e38df41939610831b7d93444e7d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -164,7 +155,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void mutekix_assets_fini </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a">mutekix_assets_t</a> *&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
@@ -215,7 +206,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool mutekix_assets_init_applet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a">mutekix_assets_t</a> *&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
@@ -248,7 +239,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">loader_file_descriptor_t * mutekix_assets_open </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structmutekix__assets__t.html">mutekix_assets_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a">mutekix_assets_t</a> *&#160;</td>
           <td class="paramname"><em>ctx</em>, </td>
         </tr>
         <tr>

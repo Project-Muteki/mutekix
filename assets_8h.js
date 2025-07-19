@@ -1,7 +1,6 @@
 var assets_8h =
 [
-    [ "mutekix_assets_index_entry_s", "structmutekix__assets__index__entry__s.html", null ],
-    [ "mutekix_assets_t", "structmutekix__assets__t.html", null ],
+    [ "mutekix_assets_t", "assets_8h.html#aebf2c4ae12e756eb1456c2ed20b50f7a", null ],
     [ "mutekix_assets_fini", "assets_8h.html#abc0a45860fb537e9969fb4c3b6fa77e8", null ],
     [ "mutekix_assets_get_root", "assets_8h.html#a9c02241b9e54580739ed1a772232eab6", null ],
     [ "mutekix_assets_init_applet", "assets_8h.html#a7e183fd3d34a47fde640ef950b7c95a3", null ],

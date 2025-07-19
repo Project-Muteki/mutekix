@@ -25,17 +25,7 @@
 var NAVTREE =
 [
   [ "muteki-shims", "index.html", [
-    [ "M*LIB: Generic type-safe Container Library for C language", "index.html", "index" ],
-    [ "How to make a release?", "md_include_2mutekix_2mlib_2doc_2DEV.html", [
-      [ "List of automatically tested systems", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md0", null ],
-      [ "List of manually tested systems", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md1", null ],
-      [ "Atomic library", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md2", null ],
-      [ "Cross compilation", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md3", null ],
-      [ "Handling issues", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md4", null ],
-      [ "Debugging", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md5", null ],
-      [ "Coding rules", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md6", null ],
-      [ "Misc", "md_include_2mutekix_2mlib_2doc_2DEV.html#autotoc_md7", null ]
-    ] ],
+    [ "mutekix", "index.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -49,7 +39,8 @@ var NAVTREE =
       [ "Globals", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ]
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ]
       ] ]
     ] ]
   ] ]
@@ -57,11 +48,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"index.html#autotoc_md305",
-"index.html#autotoc_md548",
-"index.html#autotoc_md798",
-"structSoundIoOutStream.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
