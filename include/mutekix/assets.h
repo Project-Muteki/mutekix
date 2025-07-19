@@ -46,11 +46,9 @@ loader_file_descriptor_t *mutekix_assets_get_root(void);
 /**
  * @brief Load asset bundle.
  * 
- * @param ctx Context object.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @return The allocated context object.
  */
-bool mutekix_assets_init_applet(mutekix_assets_t *ctx);
+mutekix_assets_t * mutekix_assets_init(void);
 
 /**
  * @brief Close asset bundle.

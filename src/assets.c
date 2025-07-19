@@ -249,21 +249,27 @@ loader_file_descriptor_t *mutekix_assets_get_root(void) {
     return root;
 }
 
-bool mutekix_assets_init_applet(mutekix_assets_t *ctx) {
+mutekix_assets_t *mutekix_assets_init(void) {
     loader_file_descriptor_t *root = mutekix_assets_get_root();
     if (root == NULL || _FileSize(root) <= 0) {
-        WriteComDebugMsg("mutekix_assets_init_applet: Applet does not have an assets bundle or it's an empty file.\n");
-        return false;
+        WriteComDebugMsg("mutekix_assets_init: Applet does not have an assets bundle or it's an empty file.\n");
+        return NULL;
+    }
+    mutekix_assets_t *ctx = calloc(1, sizeof(mutekix_assets_t));
+    if (ctx == NULL) {
+        WriteComDebugMsg("mutekix_assets_init: Cannot allocate memory.\n");
+        return NULL;
     }
     ctx->root = root;
     bool index_created = mutekix_assets_create_index(ctx->index, root);
     if (index_created == false) {
         _CloseFile(ctx->root);
         ctx->root = NULL;
-        WriteComDebugMsg("mutekix_assets_init_applet: Assets bundle is of unknown format.\n");
-        return false;
+        free(ctx);
+        WriteComDebugMsg("mutekix_assets_init: Assets bundle is of unknown format.\n");
+        return NULL;
     }
-    return true;
+    return ctx;
 }
 
 void mutekix_assets_fini(mutekix_assets_t *ctx) {
@@ -273,6 +279,7 @@ void mutekix_assets_fini(mutekix_assets_t *ctx) {
     mutekix_assets_index_dict_clear(ctx->index);
     _CloseFile(ctx->root);
     ctx->root = NULL;
+    free(ctx);
 }
 
 loader_file_descriptor_t *mutekix_assets_open(mutekix_assets_t *ctx, const char *path) {
